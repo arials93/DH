@@ -491,7 +491,6 @@
     <Content Include="Static\Admin\assets\vendors\custom\jqvmap\jqvmap.bundle.css" />
     <Content Include="Static\Admin\assets\vendors\custom\jqvmap\jqvmap.bundle.js" />
     <Content Include="Static\Admin\assets\vendors\custom\jqvmap\jqvmap.bundle.rtl.css" />
-    <Content Include="Views\button.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -3297,6 +3296,9 @@
     <Content Include="Static\Admin\assets\vendors\base\fonts\summernote\summernote.woff" />
     <Content Include="Views\Admin_Shared\Partials\_footer.cshtml" />
     <Content Include="Views\Admin_Shared\Partials\_aside.cshtml" />
+    <Content Include="Views\Web_Shared\Partials\_slide.cshtml" />
+    <Content Include="Views\Web_Shared\Partials\_titlepage.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

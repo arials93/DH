@@ -13,10 +13,15 @@ namespace KDDongHo.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
-            return View();
-        }
-        public ActionResult Product()
-        {
+            string s = "";
+            var brand = (from b in db.HANG_SX select b).ToList();
+            for (int i = 0; i < brand.Count(); i++ )
+            {
+                s += "<li><a href='index.html'>"+brand[i].TEN+"</a></li>";
+            }
+            ViewBag.View = s;
+
+
             return View();
         }
 	}

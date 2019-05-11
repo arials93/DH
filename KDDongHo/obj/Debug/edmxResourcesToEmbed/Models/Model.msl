@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLKD_DONGHOModelStoreContainer" CdmEntityContainer="QLKD_DONGHOEntities">
+    <EntitySetMapping Name="BAI_VIET">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.BAI_VIET">
+        <MappingFragment StoreEntitySet="BAI_VIET">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="HINH" ColumnName="HINH" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="NGAYDANG" ColumnName="NGAYDANG" />
+          <ScalarProperty Name="LOAITIN" ColumnName="LOAITIN" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="DUYET" ColumnName="DUYET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DAT_HANG">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.DAT_HANG">
+        <MappingFragment StoreEntitySet="DAT_HANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_DONGHO" ColumnName="ID_DONGHO" />
+          <ScalarProperty Name="ID_DONHANG" ColumnName="ID_DONHANG" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="GIAGIAM" ColumnName="GIAGIAM" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DON_HANG">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.DON_HANG">
+        <MappingFragment StoreEntitySet="DON_HANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SO_DH" ColumnName="SO_DH" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="DUYET" ColumnName="DUYET" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+          <ScalarProperty Name="NGAYGIAO" ColumnName="NGAYGIAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DONG_HO">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.DONG_HO">
+        <MappingFragment StoreEntitySet="DONG_HO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAUMA" ColumnName="MAUMA" />
+          <ScalarProperty Name="KICHCO" ColumnName="KICHCO" />
+          <ScalarProperty Name="DODAY" ColumnName="DODAY" />
+          <ScalarProperty Name="CHATLIEU_VO" ColumnName="CHATLIEU_VO" />
+          <ScalarProperty Name="CHATLIEU_DAY" ColumnName="CHATLIEU_DAY" />
+          <ScalarProperty Name="CHATLIEU_KINH" ColumnName="CHATLIEU_KINH" />
+          <ScalarProperty Name="DOCHIEUNUOC" ColumnName="DOCHIEUNUOC" />
+          <ScalarProperty Name="BAOHANH" ColumnName="BAOHANH" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="NGAYDANG" ColumnName="NGAYDANG" />
+          <ScalarProperty Name="GIAMGIA" ColumnName="GIAMGIA" />
+          <ScalarProperty Name="ID_HANGSX" ColumnName="ID_HANGSX" />
+          <ScalarProperty Name="ID_KIEUMAY" ColumnName="ID_KIEUMAY" />
+          <ScalarProperty Name="MOI" ColumnName="MOI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HANG_SX">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.HANG_SX">
+        <MappingFragment StoreEntitySet="HANG_SX">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="LOGO" ColumnName="LOGO" />
+          <ScalarProperty Name="GIOITHIEU" ColumnName="GIOITHIEU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HINH_ANH">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.HINH_ANH">
+        <MappingFragment StoreEntitySet="HINH_ANH">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ID_DONGHO" ColumnName="ID_DONGHO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACH_HANG">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.KHACH_HANG">
+        <MappingFragment StoreEntitySet="KHACH_HANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KIEU_MAY">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.KIEU_MAY">
+        <MappingFragment StoreEntitySet="KIEU_MAY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LUOT_LIKE">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.LUOT_LIKE">
+        <MappingFragment StoreEntitySet="LUOT_LIKE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="ID_DONGHO" ColumnName="ID_DONGHO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGUOI_DUNG">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.NGUOI_DUNG">
+        <MappingFragment StoreEntitySet="NGUOI_DUNG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="IS_SUPER_USER" ColumnName="IS_SUPER_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHAN_QUYEN">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.PHAN_QUYEN">
+        <MappingFragment StoreEntitySet="PHAN_QUYEN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_QUYENLOI" ColumnName="ID_QUYENLOI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUYEN_LOI">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.QUYEN_LOI">
+        <MappingFragment StoreEntitySet="QUYEN_LOI">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LOAIHINH" ColumnName="LOAIHINH" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SLIDEs">
+      <EntityTypeMapping TypeName="QLKD_DONGHOModel.SLIDE">
+        <MappingFragment StoreEntitySet="SLIDE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HINH" ColumnName="HINH" />
+          <ScalarProperty Name="LOGAN" ColumnName="LOGAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

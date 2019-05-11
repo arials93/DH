@@ -37,13 +37,19 @@
     @RenderSection("styles", required: false)
 </head>
 <body class="animsition">
+
+
     <!-- Header -->
     @RenderPage("~/Views/Web_Shared/Partials/_header.cshtml")
+
 
     @RenderBody()
 
     <!-- Footer -->
     @RenderPage("~/Views/Web_Shared/Partials/_footer.cshtml")
+
+
+
     <!--===============================================================================================-->
     @Scripts.Render("~/Static/Web/vendor/jquery/jquery-3.2.1.min.js")
     <!--===============================================================================================-->
