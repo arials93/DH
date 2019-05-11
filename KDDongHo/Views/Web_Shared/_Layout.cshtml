@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~Static/Web/images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/bootstrap/css/bootstrap.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/fonts/themify/themify-icons.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/fonts/Linearicons-Free-v1.0.0/icon-font.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/fonts/elegant-font/html-css/style.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/animate/animate.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/css-hamburgers/hamburgers.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/animsition/css/animsition.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/select2/select2.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/slick/slick.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/vendor/noui/nouislider.min.css")
+    <!--===============================================================================================-->
+    @Styles.Render("~/Static/Web/css/util.css")
+    @Styles.Render("~/Static/Web/css/main.css")
+    <!--===============================================================================================-->
+    @RenderSection("styles", required: false)
+</head>
+<body class="animsition">
+    <!-- Header -->
+    @RenderPage("~/Views/Web_Shared/Partials/_header.cshtml")
+
+    @RenderBody()
+
+    <!-- Footer -->
+    @RenderPage("~/Views/Web_Shared/Partials/_footer.cshtml")
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/jquery/jquery-3.2.1.min.js")
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/animsition/js/animsition.min.js")
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/bootstrap/js/popper.js")
+    @Scripts.Render("~/Static/Web/vendor/bootstrap/js/bootstrap.min.js")
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/select2/select2.min.js")
+    
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/daterangepicker/moment.min.js")
+    @Scripts.Render("~/Static/Web/vendor/daterangepicker/daterangepicker.js")
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/slick/slick.min.js")
+    @Scripts.Render("~/Static/Web/js/slick-custom.js")
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/sweetalert/sweetalert.min.js")
+    
+
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/vendor/noui/nouislider.min.js")
+    
+    <!--===============================================================================================-->
+    @Scripts.Render("~/Static/Web/js/main.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,159 @@
+﻿@{
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Thêm sản phẩm";
+}
+
+@section styles{
+
+}
+<div class="section__content section__content--p30">
+    <div class="container-fluid">
+        <h3 class="title-5 m-b-10">THÊM SẢN PHẨM</h3>
+        <div class="row">         
+            <div class="col-lg-2">
+                <div>
+                    <input type="file" id="file-input" name="file-input" class="form-control-file">
+                </div>
+                <div>
+                    <input type="file" id="file-input" name="file-input" class="form-control-file">
+                </div>
+                <div>
+                    <input type="file" id="file-input" name="file-input" class="form-control-file">
+                </div>
+
+            </div>
+            <div class="col-lg-5">
+                <div class="card-body card-block">
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">Mẫu mã</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">Đơn giá</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="select" class=" form-control-label">Hãng </label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <select name="select" id="select" class="form-control">
+                                <option value="0">Please select</option>
+                                <option value="1">Option #1</option>
+                                <option value="2">Option #2</option>
+                                <option value="3">Option #3</option>
+                            </select>
+                        </div>
+                    </div>                
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="select" class=" form-control-label">Kiểu máy</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <select name="select" id="select" class="form-control">
+                                <option value="0">Please select</option>
+                                <option value="1">Option #1</option>
+                                <option value="2">Option #2</option>
+                                <option value="3">Option #3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">Kích cỡ</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">Độ dày</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card-body card-block">  
+                                   
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">CL vỏ</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">CL dây</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">CL kính</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">ATM</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">Bảo hành</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-4">
+                            <label for="text-input" class=" form-control-label">Giảm giá</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                            @*<small class="form-text text-muted">This is a help text</small>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+}
+
