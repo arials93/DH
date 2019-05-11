@@ -504,7 +504,6 @@
     <Content Include="Static\Admin\assets\vendors\custom\jqvmap\jqvmap.bundle.css" />
     <Content Include="Static\Admin\assets\vendors\custom\jqvmap\jqvmap.bundle.js" />
     <Content Include="Static\Admin\assets\vendors\custom\jqvmap\jqvmap.bundle.rtl.css" />
-    <Content Include="Views\button.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -3300,12 +3299,18 @@
     <Content Include="Static\Admin\assets\vendors\base\fonts\summernote\summernote.woff" />
     <Content Include="Views\Admin_Shared\Partials\_footer.cshtml" />
     <Content Include="Views\Admin_Shared\Partials\_aside.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\AdminBrand\Create.cshtml" />
     <Content Include="Views\AdminBrand\Delete.cshtml" />
     <Content Include="Views\AdminBrand\Details.cshtml" />
     <Content Include="Views\AdminBrand\Edit.cshtml" />
     <Content Include="Views\AdminBrand\Index.cshtml" />
     <Content Include="Views\Admin_Shared\Partials\_modal.cshtml" />
+=======
+    <Content Include="Views\Web_Shared\Partials\_slide.cshtml" />
+    <Content Include="Views\Web_Shared\Partials\_titlepage.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+>>>>>>> e3f058b3e9776bc6055ee34c6b68073f2c221d2d
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
