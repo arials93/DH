@@ -14,6 +14,7 @@ namespace KDDongHo.Models
     
     public partial class DON_HANG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DON_HANG()
         {
             this.DAT_HANG = new HashSet<DAT_HANG>();
@@ -28,6 +29,7 @@ namespace KDDongHo.Models
         public Nullable<System.DateTime> NGAYDAT { get; set; }
         public Nullable<System.DateTime> NGAYGIAO { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DAT_HANG> DAT_HANG { get; set; }
         public virtual KHACH_HANG KHACH_HANG { get; set; }
     }

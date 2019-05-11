@@ -28,28 +28,22 @@ namespace KDDongHo
             );
 
             routes.MapRoute(
-                name: "Product",
-                url: "{controller}/{action}",
-                defaults: new { controller = "AdminDashboard", action = "Product" }
-            );
-
-            routes.MapRoute(
-                name: "AddProduct",
-                url: "{controller}/{action}",
-                defaults: new { controller = "AdminDashboard", action = "AddProduct" }
-            );
-
-            routes.MapRoute(
                name: "Brand",
                url: "{controller}/{action}",
-               defaults: new { controller = "AdminDashboard", action = "Brand" }
+               defaults: new { controller = "AdminBrandController", action = "Index" }
            );
 
             routes.MapRoute(
-              name: "Series",
-              url: "{controller}/{action}",
-              defaults: new { controller = "AdminDashboard", action = "Series" }
-          );
+               name: "BrandCreate",
+               url: "{controller}/{action}",
+               defaults: new { controller = "AdminBrandController", action = "Create" }
+           );
+
+            routes.MapRoute(
+               name: "BrandEdit",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "AdminBrandController", action = "Edit", id = UrlParameter.Optional }
+           );
         }
     }
 }

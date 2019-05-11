@@ -14,6 +14,7 @@ namespace KDDongHo.Models
     
     public partial class DONG_HO
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DONG_HO()
         {
             this.DAT_HANG = new HashSet<DAT_HANG>();
@@ -37,10 +38,13 @@ namespace KDDongHo.Models
         public int ID_KIEUMAY { get; set; }
         public Nullable<bool> MOI { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DAT_HANG> DAT_HANG { get; set; }
         public virtual HANG_SX HANG_SX { get; set; }
         public virtual KIEU_MAY KIEU_MAY { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HINH_ANH> HINH_ANH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LUOT_LIKE> LUOT_LIKE { get; set; }
     }
 }

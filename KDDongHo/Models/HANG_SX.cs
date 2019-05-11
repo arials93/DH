@@ -14,6 +14,7 @@ namespace KDDongHo.Models
     
     public partial class HANG_SX
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HANG_SX()
         {
             this.DONG_HO = new HashSet<DONG_HO>();
@@ -24,6 +25,7 @@ namespace KDDongHo.Models
         public string LOGO { get; set; }
         public string GIOITHIEU { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DONG_HO> DONG_HO { get; set; }
     }
 }

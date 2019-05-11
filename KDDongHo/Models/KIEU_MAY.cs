@@ -14,6 +14,7 @@ namespace KDDongHo.Models
     
     public partial class KIEU_MAY
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KIEU_MAY()
         {
             this.DONG_HO = new HashSet<DONG_HO>();
@@ -23,6 +24,7 @@ namespace KDDongHo.Models
         public string TEN { get; set; }
         public string GHICHU { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DONG_HO> DONG_HO { get; set; }
     }
 }

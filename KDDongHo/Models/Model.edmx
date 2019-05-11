@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLKD_DONGHOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QLKD_DONGHOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BAI_VIET">
           <Key>
             <PropertyRef Name="ID" />
@@ -146,7 +146,7 @@
           <Property Name="HINH" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="LOGAN" Type="nvarchar" MaxLength="200" />
         </EntityType>
-        <Association Name="FK__BAI_VIET__ID_NGU__1B0907CE">
+        <Association Name="FK__BAI_VIET__ID_NGU__4222D4EF">
           <End Role="NGUOI_DUNG" Type="Self.NGUOI_DUNG" Multiplicity="1" />
           <End Role="BAI_VIET" Type="Self.BAI_VIET" Multiplicity="*" />
           <ReferentialConstraint>
@@ -158,7 +158,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAT_HANG__ID_DON__33D4B598">
+        <Association Name="FK__DAT_HANG__ID_DON__5AEE82B9">
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="1" />
           <End Role="DAT_HANG" Type="Self.DAT_HANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -170,7 +170,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAT_HANG__ID_DON__34C8D9D1">
+        <Association Name="FK__DAT_HANG__ID_DON__5BE2A6F2">
           <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="1" />
           <End Role="DAT_HANG" Type="Self.DAT_HANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -182,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DON_HANG__ID_KHA__30F848ED">
+        <Association Name="FK__DON_HANG__ID_KHA__5812160E">
           <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
           <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -194,7 +194,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DONG_HO__ID_HANG__239E4DCF">
+        <Association Name="FK__DONG_HO__ID_HANG__4AB81AF0">
           <End Role="HANG_SX" Type="Self.HANG_SX" Multiplicity="1" />
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -206,7 +206,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DONG_HO__ID_KIEU__24927208">
+        <Association Name="FK__DONG_HO__ID_KIEU__4BAC3F29">
           <End Role="KIEU_MAY" Type="Self.KIEU_MAY" Multiplicity="1" />
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -218,7 +218,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HINH_ANH__ID_DON__276EDEB3">
+        <Association Name="FK__HINH_ANH__ID_DON__4E88ABD4">
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="1" />
           <End Role="HINH_ANH" Type="Self.HINH_ANH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -230,7 +230,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LUOT_LIKE__ID_DO__2D27B809">
+        <Association Name="FK__LUOT_LIKE__ID_DO__5441852A">
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="1" />
           <End Role="LUOT_LIKE" Type="Self.LUOT_LIKE" Multiplicity="*" />
           <ReferentialConstraint>
@@ -242,7 +242,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LUOT_LIKE__ID_KH__2C3393D0">
+        <Association Name="FK__LUOT_LIKE__ID_KH__534D60F1">
           <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="1" />
           <End Role="LUOT_LIKE" Type="Self.LUOT_LIKE" Multiplicity="*" />
           <ReferentialConstraint>
@@ -254,7 +254,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHAN_QUYE__ID_NG__164452B1">
+        <Association Name="FK__PHAN_QUYE__ID_NG__3D5E1FD2">
           <End Role="NGUOI_DUNG" Type="Self.NGUOI_DUNG" Multiplicity="1" />
           <End Role="PHAN_QUYEN" Type="Self.PHAN_QUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -266,7 +266,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHAN_QUYE__ID_QU__173876EA">
+        <Association Name="FK__PHAN_QUYE__ID_QU__3E52440B">
           <End Role="QUYEN_LOI" Type="Self.QUYEN_LOI" Multiplicity="1" />
           <End Role="PHAN_QUYEN" Type="Self.PHAN_QUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -292,47 +292,47 @@
           <EntitySet Name="PHAN_QUYEN" EntityType="Self.PHAN_QUYEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QUYEN_LOI" EntityType="Self.QUYEN_LOI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SLIDE" EntityType="Self.SLIDE" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BAI_VIET__ID_NGU__1B0907CE" Association="Self.FK__BAI_VIET__ID_NGU__1B0907CE">
+          <AssociationSet Name="FK__BAI_VIET__ID_NGU__4222D4EF" Association="Self.FK__BAI_VIET__ID_NGU__4222D4EF">
             <End Role="NGUOI_DUNG" EntitySet="NGUOI_DUNG" />
             <End Role="BAI_VIET" EntitySet="BAI_VIET" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAT_HANG__ID_DON__33D4B598" Association="Self.FK__DAT_HANG__ID_DON__33D4B598">
+          <AssociationSet Name="FK__DAT_HANG__ID_DON__5AEE82B9" Association="Self.FK__DAT_HANG__ID_DON__5AEE82B9">
             <End Role="DONG_HO" EntitySet="DONG_HO" />
             <End Role="DAT_HANG" EntitySet="DAT_HANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAT_HANG__ID_DON__34C8D9D1" Association="Self.FK__DAT_HANG__ID_DON__34C8D9D1">
+          <AssociationSet Name="FK__DAT_HANG__ID_DON__5BE2A6F2" Association="Self.FK__DAT_HANG__ID_DON__5BE2A6F2">
             <End Role="DON_HANG" EntitySet="DON_HANG" />
             <End Role="DAT_HANG" EntitySet="DAT_HANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DON_HANG__ID_KHA__30F848ED" Association="Self.FK__DON_HANG__ID_KHA__30F848ED">
+          <AssociationSet Name="FK__DON_HANG__ID_KHA__5812160E" Association="Self.FK__DON_HANG__ID_KHA__5812160E">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="DON_HANG" EntitySet="DON_HANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DONG_HO__ID_HANG__239E4DCF" Association="Self.FK__DONG_HO__ID_HANG__239E4DCF">
+          <AssociationSet Name="FK__DONG_HO__ID_HANG__4AB81AF0" Association="Self.FK__DONG_HO__ID_HANG__4AB81AF0">
             <End Role="HANG_SX" EntitySet="HANG_SX" />
             <End Role="DONG_HO" EntitySet="DONG_HO" />
           </AssociationSet>
-          <AssociationSet Name="FK__DONG_HO__ID_KIEU__24927208" Association="Self.FK__DONG_HO__ID_KIEU__24927208">
+          <AssociationSet Name="FK__DONG_HO__ID_KIEU__4BAC3F29" Association="Self.FK__DONG_HO__ID_KIEU__4BAC3F29">
             <End Role="KIEU_MAY" EntitySet="KIEU_MAY" />
             <End Role="DONG_HO" EntitySet="DONG_HO" />
           </AssociationSet>
-          <AssociationSet Name="FK__HINH_ANH__ID_DON__276EDEB3" Association="Self.FK__HINH_ANH__ID_DON__276EDEB3">
+          <AssociationSet Name="FK__HINH_ANH__ID_DON__4E88ABD4" Association="Self.FK__HINH_ANH__ID_DON__4E88ABD4">
             <End Role="DONG_HO" EntitySet="DONG_HO" />
             <End Role="HINH_ANH" EntitySet="HINH_ANH" />
           </AssociationSet>
-          <AssociationSet Name="FK__LUOT_LIKE__ID_DO__2D27B809" Association="Self.FK__LUOT_LIKE__ID_DO__2D27B809">
+          <AssociationSet Name="FK__LUOT_LIKE__ID_DO__5441852A" Association="Self.FK__LUOT_LIKE__ID_DO__5441852A">
             <End Role="DONG_HO" EntitySet="DONG_HO" />
             <End Role="LUOT_LIKE" EntitySet="LUOT_LIKE" />
           </AssociationSet>
-          <AssociationSet Name="FK__LUOT_LIKE__ID_KH__2C3393D0" Association="Self.FK__LUOT_LIKE__ID_KH__2C3393D0">
+          <AssociationSet Name="FK__LUOT_LIKE__ID_KH__534D60F1" Association="Self.FK__LUOT_LIKE__ID_KH__534D60F1">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="LUOT_LIKE" EntitySet="LUOT_LIKE" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHAN_QUYE__ID_NG__164452B1" Association="Self.FK__PHAN_QUYE__ID_NG__164452B1">
+          <AssociationSet Name="FK__PHAN_QUYE__ID_NG__3D5E1FD2" Association="Self.FK__PHAN_QUYE__ID_NG__3D5E1FD2">
             <End Role="NGUOI_DUNG" EntitySet="NGUOI_DUNG" />
             <End Role="PHAN_QUYEN" EntitySet="PHAN_QUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHAN_QUYE__ID_QU__173876EA" Association="Self.FK__PHAN_QUYE__ID_QU__173876EA">
+          <AssociationSet Name="FK__PHAN_QUYE__ID_QU__3E52440B" Association="Self.FK__PHAN_QUYE__ID_QU__3E52440B">
             <End Role="QUYEN_LOI" EntitySet="QUYEN_LOI" />
             <End Role="PHAN_QUYEN" EntitySet="PHAN_QUYEN" />
           </AssociationSet>
@@ -341,7 +341,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="QLKD_DONGHOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="QLKD_DONGHOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="BAI_VIET">
           <Key>
             <PropertyRef Name="ID" />
@@ -354,7 +354,7 @@
           <Property Name="LOAITIN" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
           <Property Name="ID_NGUOIDUNG" Type="Int32" Nullable="false" />
           <Property Name="DUYET" Type="Boolean" />
-          <NavigationProperty Name="NGUOI_DUNG" Relationship="Self.FK__BAI_VIET__ID_NGU__1B0907CE" FromRole="BAI_VIET" ToRole="NGUOI_DUNG" />
+          <NavigationProperty Name="NGUOI_DUNG" Relationship="Self.FK__BAI_VIET__ID_NGU__4222D4EF" FromRole="BAI_VIET" ToRole="NGUOI_DUNG" />
         </EntityType>
         <EntityType Name="DAT_HANG">
           <Key>
@@ -367,8 +367,8 @@
           <Property Name="DONGIA" Type="Double" Nullable="false" />
           <Property Name="GIAGIAM" Type="Double" Nullable="false" />
           <Property Name="THANHTIEN" Type="Double" Nullable="false" />
-          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__DAT_HANG__ID_DON__33D4B598" FromRole="DAT_HANG" ToRole="DONG_HO" />
-          <NavigationProperty Name="DON_HANG" Relationship="Self.FK__DAT_HANG__ID_DON__34C8D9D1" FromRole="DAT_HANG" ToRole="DON_HANG" />
+          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__DAT_HANG__ID_DON__5AEE82B9" FromRole="DAT_HANG" ToRole="DONG_HO" />
+          <NavigationProperty Name="DON_HANG" Relationship="Self.FK__DAT_HANG__ID_DON__5BE2A6F2" FromRole="DAT_HANG" ToRole="DON_HANG" />
         </EntityType>
         <EntityType Name="DON_HANG">
           <Key>
@@ -382,8 +382,8 @@
           <Property Name="DUYET" Type="Boolean" />
           <Property Name="NGAYDAT" Type="DateTime" Precision="0" />
           <Property Name="NGAYGIAO" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="DAT_HANG" Relationship="Self.FK__DAT_HANG__ID_DON__34C8D9D1" FromRole="DON_HANG" ToRole="DAT_HANG" />
-          <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK__DON_HANG__ID_KHA__30F848ED" FromRole="DON_HANG" ToRole="KHACH_HANG" />
+          <NavigationProperty Name="DAT_HANG" Relationship="Self.FK__DAT_HANG__ID_DON__5BE2A6F2" FromRole="DON_HANG" ToRole="DAT_HANG" />
+          <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK__DON_HANG__ID_KHA__5812160E" FromRole="DON_HANG" ToRole="KHACH_HANG" />
         </EntityType>
         <EntityType Name="DONG_HO">
           <Key>
@@ -404,11 +404,11 @@
           <Property Name="ID_HANGSX" Type="Int32" Nullable="false" />
           <Property Name="ID_KIEUMAY" Type="Int32" Nullable="false" />
           <Property Name="MOI" Type="Boolean" />
-          <NavigationProperty Name="DAT_HANG" Relationship="Self.FK__DAT_HANG__ID_DON__33D4B598" FromRole="DONG_HO" ToRole="DAT_HANG" />
-          <NavigationProperty Name="HANG_SX" Relationship="Self.FK__DONG_HO__ID_HANG__239E4DCF" FromRole="DONG_HO" ToRole="HANG_SX" />
-          <NavigationProperty Name="KIEU_MAY" Relationship="Self.FK__DONG_HO__ID_KIEU__24927208" FromRole="DONG_HO" ToRole="KIEU_MAY" />
-          <NavigationProperty Name="HINH_ANH" Relationship="Self.FK__HINH_ANH__ID_DON__276EDEB3" FromRole="DONG_HO" ToRole="HINH_ANH" />
-          <NavigationProperty Name="LUOT_LIKE" Relationship="Self.FK__LUOT_LIKE__ID_DO__2D27B809" FromRole="DONG_HO" ToRole="LUOT_LIKE" />
+          <NavigationProperty Name="DAT_HANG" Relationship="Self.FK__DAT_HANG__ID_DON__5AEE82B9" FromRole="DONG_HO" ToRole="DAT_HANG" />
+          <NavigationProperty Name="HANG_SX" Relationship="Self.FK__DONG_HO__ID_HANG__4AB81AF0" FromRole="DONG_HO" ToRole="HANG_SX" />
+          <NavigationProperty Name="KIEU_MAY" Relationship="Self.FK__DONG_HO__ID_KIEU__4BAC3F29" FromRole="DONG_HO" ToRole="KIEU_MAY" />
+          <NavigationProperty Name="HINH_ANH" Relationship="Self.FK__HINH_ANH__ID_DON__4E88ABD4" FromRole="DONG_HO" ToRole="HINH_ANH" />
+          <NavigationProperty Name="LUOT_LIKE" Relationship="Self.FK__LUOT_LIKE__ID_DO__5441852A" FromRole="DONG_HO" ToRole="LUOT_LIKE" />
         </EntityType>
         <EntityType Name="HANG_SX">
           <Key>
@@ -418,7 +418,7 @@
           <Property Name="TEN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LOGO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="GIOITHIEU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__DONG_HO__ID_HANG__239E4DCF" FromRole="HANG_SX" ToRole="DONG_HO" />
+          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__DONG_HO__ID_HANG__4AB81AF0" FromRole="HANG_SX" ToRole="DONG_HO" />
         </EntityType>
         <EntityType Name="HINH_ANH">
           <Key>
@@ -427,7 +427,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ID_DONGHO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__HINH_ANH__ID_DON__276EDEB3" FromRole="HINH_ANH" ToRole="DONG_HO" />
+          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__HINH_ANH__ID_DON__4E88ABD4" FromRole="HINH_ANH" ToRole="DONG_HO" />
         </EntityType>
         <EntityType Name="KHACH_HANG">
           <Key>
@@ -440,8 +440,8 @@
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="DON_HANG" Relationship="Self.FK__DON_HANG__ID_KHA__30F848ED" FromRole="KHACH_HANG" ToRole="DON_HANG" />
-          <NavigationProperty Name="LUOT_LIKE" Relationship="Self.FK__LUOT_LIKE__ID_KH__2C3393D0" FromRole="KHACH_HANG" ToRole="LUOT_LIKE" />
+          <NavigationProperty Name="DON_HANG" Relationship="Self.FK__DON_HANG__ID_KHA__5812160E" FromRole="KHACH_HANG" ToRole="DON_HANG" />
+          <NavigationProperty Name="LUOT_LIKE" Relationship="Self.FK__LUOT_LIKE__ID_KH__534D60F1" FromRole="KHACH_HANG" ToRole="LUOT_LIKE" />
         </EntityType>
         <EntityType Name="KIEU_MAY">
           <Key>
@@ -450,7 +450,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GHICHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__DONG_HO__ID_KIEU__24927208" FromRole="KIEU_MAY" ToRole="DONG_HO" />
+          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__DONG_HO__ID_KIEU__4BAC3F29" FromRole="KIEU_MAY" ToRole="DONG_HO" />
         </EntityType>
         <EntityType Name="LUOT_LIKE">
           <Key>
@@ -459,8 +459,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_KHACHHANG" Type="Int32" Nullable="false" />
           <Property Name="ID_DONGHO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__LUOT_LIKE__ID_DO__2D27B809" FromRole="LUOT_LIKE" ToRole="DONG_HO" />
-          <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK__LUOT_LIKE__ID_KH__2C3393D0" FromRole="LUOT_LIKE" ToRole="KHACH_HANG" />
+          <NavigationProperty Name="DONG_HO" Relationship="Self.FK__LUOT_LIKE__ID_DO__5441852A" FromRole="LUOT_LIKE" ToRole="DONG_HO" />
+          <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK__LUOT_LIKE__ID_KH__534D60F1" FromRole="LUOT_LIKE" ToRole="KHACH_HANG" />
         </EntityType>
         <EntityType Name="NGUOI_DUNG">
           <Key>
@@ -475,8 +475,8 @@
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TRANGTHAI" Type="Boolean" />
           <Property Name="IS_SUPER_USER" Type="Boolean" />
-          <NavigationProperty Name="BAI_VIET" Relationship="Self.FK__BAI_VIET__ID_NGU__1B0907CE" FromRole="NGUOI_DUNG" ToRole="BAI_VIET" />
-          <NavigationProperty Name="PHAN_QUYEN" Relationship="Self.FK__PHAN_QUYE__ID_NG__164452B1" FromRole="NGUOI_DUNG" ToRole="PHAN_QUYEN" />
+          <NavigationProperty Name="BAI_VIET" Relationship="Self.FK__BAI_VIET__ID_NGU__4222D4EF" FromRole="NGUOI_DUNG" ToRole="BAI_VIET" />
+          <NavigationProperty Name="PHAN_QUYEN" Relationship="Self.FK__PHAN_QUYE__ID_NG__3D5E1FD2" FromRole="NGUOI_DUNG" ToRole="PHAN_QUYEN" />
         </EntityType>
         <EntityType Name="PHAN_QUYEN">
           <Key>
@@ -485,8 +485,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_NGUOIDUNG" Type="Int32" Nullable="false" />
           <Property Name="ID_QUYENLOI" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="NGUOI_DUNG" Relationship="Self.FK__PHAN_QUYE__ID_NG__164452B1" FromRole="PHAN_QUYEN" ToRole="NGUOI_DUNG" />
-          <NavigationProperty Name="QUYEN_LOI" Relationship="Self.FK__PHAN_QUYE__ID_QU__173876EA" FromRole="PHAN_QUYEN" ToRole="QUYEN_LOI" />
+          <NavigationProperty Name="NGUOI_DUNG" Relationship="Self.FK__PHAN_QUYE__ID_NG__3D5E1FD2" FromRole="PHAN_QUYEN" ToRole="NGUOI_DUNG" />
+          <NavigationProperty Name="QUYEN_LOI" Relationship="Self.FK__PHAN_QUYE__ID_QU__3E52440B" FromRole="PHAN_QUYEN" ToRole="QUYEN_LOI" />
         </EntityType>
         <EntityType Name="QUYEN_LOI">
           <Key>
@@ -495,7 +495,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LOAIHINH" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NOIDUNG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PHAN_QUYEN" Relationship="Self.FK__PHAN_QUYE__ID_QU__173876EA" FromRole="QUYEN_LOI" ToRole="PHAN_QUYEN" />
+          <NavigationProperty Name="PHAN_QUYEN" Relationship="Self.FK__PHAN_QUYE__ID_QU__3E52440B" FromRole="QUYEN_LOI" ToRole="PHAN_QUYEN" />
         </EntityType>
         <EntityType Name="SLIDE">
           <Key>
@@ -505,7 +505,7 @@
           <Property Name="HINH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LOGAN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="FK__BAI_VIET__ID_NGU__1B0907CE">
+        <Association Name="FK__BAI_VIET__ID_NGU__4222D4EF">
           <End Role="NGUOI_DUNG" Type="Self.NGUOI_DUNG" Multiplicity="1" />
           <End Role="BAI_VIET" Type="Self.BAI_VIET" Multiplicity="*" />
           <ReferentialConstraint>
@@ -517,7 +517,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAT_HANG__ID_DON__33D4B598">
+        <Association Name="FK__DAT_HANG__ID_DON__5AEE82B9">
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="1" />
           <End Role="DAT_HANG" Type="Self.DAT_HANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -529,7 +529,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAT_HANG__ID_DON__34C8D9D1">
+        <Association Name="FK__DAT_HANG__ID_DON__5BE2A6F2">
           <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="1" />
           <End Role="DAT_HANG" Type="Self.DAT_HANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -541,7 +541,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DON_HANG__ID_KHA__30F848ED">
+        <Association Name="FK__DON_HANG__ID_KHA__5812160E">
           <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
           <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -553,7 +553,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DONG_HO__ID_HANG__239E4DCF">
+        <Association Name="FK__DONG_HO__ID_HANG__4AB81AF0">
           <End Role="HANG_SX" Type="Self.HANG_SX" Multiplicity="1" />
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -565,7 +565,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DONG_HO__ID_KIEU__24927208">
+        <Association Name="FK__DONG_HO__ID_KIEU__4BAC3F29">
           <End Role="KIEU_MAY" Type="Self.KIEU_MAY" Multiplicity="1" />
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -577,7 +577,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HINH_ANH__ID_DON__276EDEB3">
+        <Association Name="FK__HINH_ANH__ID_DON__4E88ABD4">
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="1" />
           <End Role="HINH_ANH" Type="Self.HINH_ANH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -589,7 +589,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LUOT_LIKE__ID_DO__2D27B809">
+        <Association Name="FK__LUOT_LIKE__ID_DO__5441852A">
           <End Role="DONG_HO" Type="Self.DONG_HO" Multiplicity="1" />
           <End Role="LUOT_LIKE" Type="Self.LUOT_LIKE" Multiplicity="*" />
           <ReferentialConstraint>
@@ -601,7 +601,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LUOT_LIKE__ID_KH__2C3393D0">
+        <Association Name="FK__LUOT_LIKE__ID_KH__534D60F1">
           <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="1" />
           <End Role="LUOT_LIKE" Type="Self.LUOT_LIKE" Multiplicity="*" />
           <ReferentialConstraint>
@@ -613,7 +613,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHAN_QUYE__ID_NG__164452B1">
+        <Association Name="FK__PHAN_QUYE__ID_NG__3D5E1FD2">
           <End Role="NGUOI_DUNG" Type="Self.NGUOI_DUNG" Multiplicity="1" />
           <End Role="PHAN_QUYEN" Type="Self.PHAN_QUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -625,7 +625,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHAN_QUYE__ID_QU__173876EA">
+        <Association Name="FK__PHAN_QUYE__ID_QU__3E52440B">
           <End Role="QUYEN_LOI" Type="Self.QUYEN_LOI" Multiplicity="1" />
           <End Role="PHAN_QUYEN" Type="Self.PHAN_QUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -651,47 +651,47 @@
           <EntitySet Name="PHAN_QUYEN" EntityType="Self.PHAN_QUYEN" />
           <EntitySet Name="QUYEN_LOI" EntityType="Self.QUYEN_LOI" />
           <EntitySet Name="SLIDEs" EntityType="Self.SLIDE" />
-          <AssociationSet Name="FK__BAI_VIET__ID_NGU__1B0907CE" Association="Self.FK__BAI_VIET__ID_NGU__1B0907CE">
+          <AssociationSet Name="FK__BAI_VIET__ID_NGU__4222D4EF" Association="Self.FK__BAI_VIET__ID_NGU__4222D4EF">
             <End Role="NGUOI_DUNG" EntitySet="NGUOI_DUNG" />
             <End Role="BAI_VIET" EntitySet="BAI_VIET" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAT_HANG__ID_DON__33D4B598" Association="Self.FK__DAT_HANG__ID_DON__33D4B598">
+          <AssociationSet Name="FK__DAT_HANG__ID_DON__5AEE82B9" Association="Self.FK__DAT_HANG__ID_DON__5AEE82B9">
             <End Role="DONG_HO" EntitySet="DONG_HO" />
             <End Role="DAT_HANG" EntitySet="DAT_HANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAT_HANG__ID_DON__34C8D9D1" Association="Self.FK__DAT_HANG__ID_DON__34C8D9D1">
+          <AssociationSet Name="FK__DAT_HANG__ID_DON__5BE2A6F2" Association="Self.FK__DAT_HANG__ID_DON__5BE2A6F2">
             <End Role="DON_HANG" EntitySet="DON_HANG" />
             <End Role="DAT_HANG" EntitySet="DAT_HANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DON_HANG__ID_KHA__30F848ED" Association="Self.FK__DON_HANG__ID_KHA__30F848ED">
+          <AssociationSet Name="FK__DON_HANG__ID_KHA__5812160E" Association="Self.FK__DON_HANG__ID_KHA__5812160E">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="DON_HANG" EntitySet="DON_HANG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DONG_HO__ID_HANG__239E4DCF" Association="Self.FK__DONG_HO__ID_HANG__239E4DCF">
+          <AssociationSet Name="FK__DONG_HO__ID_HANG__4AB81AF0" Association="Self.FK__DONG_HO__ID_HANG__4AB81AF0">
             <End Role="HANG_SX" EntitySet="HANG_SX" />
             <End Role="DONG_HO" EntitySet="DONG_HO" />
           </AssociationSet>
-          <AssociationSet Name="FK__DONG_HO__ID_KIEU__24927208" Association="Self.FK__DONG_HO__ID_KIEU__24927208">
+          <AssociationSet Name="FK__DONG_HO__ID_KIEU__4BAC3F29" Association="Self.FK__DONG_HO__ID_KIEU__4BAC3F29">
             <End Role="KIEU_MAY" EntitySet="KIEU_MAY" />
             <End Role="DONG_HO" EntitySet="DONG_HO" />
           </AssociationSet>
-          <AssociationSet Name="FK__HINH_ANH__ID_DON__276EDEB3" Association="Self.FK__HINH_ANH__ID_DON__276EDEB3">
+          <AssociationSet Name="FK__HINH_ANH__ID_DON__4E88ABD4" Association="Self.FK__HINH_ANH__ID_DON__4E88ABD4">
             <End Role="DONG_HO" EntitySet="DONG_HO" />
             <End Role="HINH_ANH" EntitySet="HINH_ANH" />
           </AssociationSet>
-          <AssociationSet Name="FK__LUOT_LIKE__ID_DO__2D27B809" Association="Self.FK__LUOT_LIKE__ID_DO__2D27B809">
+          <AssociationSet Name="FK__LUOT_LIKE__ID_DO__5441852A" Association="Self.FK__LUOT_LIKE__ID_DO__5441852A">
             <End Role="DONG_HO" EntitySet="DONG_HO" />
             <End Role="LUOT_LIKE" EntitySet="LUOT_LIKE" />
           </AssociationSet>
-          <AssociationSet Name="FK__LUOT_LIKE__ID_KH__2C3393D0" Association="Self.FK__LUOT_LIKE__ID_KH__2C3393D0">
+          <AssociationSet Name="FK__LUOT_LIKE__ID_KH__534D60F1" Association="Self.FK__LUOT_LIKE__ID_KH__534D60F1">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="LUOT_LIKE" EntitySet="LUOT_LIKE" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHAN_QUYE__ID_NG__164452B1" Association="Self.FK__PHAN_QUYE__ID_NG__164452B1">
+          <AssociationSet Name="FK__PHAN_QUYE__ID_NG__3D5E1FD2" Association="Self.FK__PHAN_QUYE__ID_NG__3D5E1FD2">
             <End Role="NGUOI_DUNG" EntitySet="NGUOI_DUNG" />
             <End Role="PHAN_QUYEN" EntitySet="PHAN_QUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHAN_QUYE__ID_QU__173876EA" Association="Self.FK__PHAN_QUYE__ID_QU__173876EA">
+          <AssociationSet Name="FK__PHAN_QUYE__ID_QU__3E52440B" Association="Self.FK__PHAN_QUYE__ID_QU__3E52440B">
             <End Role="QUYEN_LOI" EntitySet="QUYEN_LOI" />
             <End Role="PHAN_QUYEN" EntitySet="PHAN_QUYEN" />
           </AssociationSet>

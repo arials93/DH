@@ -1,17 +1,34 @@
-﻿<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
+﻿
+@{
+    var dashboard_active = "";
+    var brand_active = "";
+}
+
+@if (Request.Url.ToString().Contains("AdminDashboard"))
+{
+    dashboard_active = "m-menu__item--active";
+}
+
+@if (Request.Url.ToString().Contains("AdminBrand"))
+{
+    brand_active = "m-menu__item--active";
+}
+
+<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
 
     <!-- BEGIN: Aside Menu -->
     <div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " m-menu-vertical="1" m-menu-scrollable="1" m-menu-dropdown-timeout="500" style="position: relative;">
         <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-            <li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
+
+            <li class="m-menu__item @dashboard_active" aria-haspopup="true">
                 <a href="~/AdminDashboard/Index" class="m-menu__link ">
                     <i class="m-menu__link-icon flaticon-line-graph"></i>
                     <span class="m-menu__link-title">
                         <span class="m-menu__link-wrap">
                             <span class="m-menu__link-text" style="font-family:Tahoma">Thống kê</span>
                             @*<span class="m-menu__link-badge">
-                                <span class="m-badge m-badge--danger">2</span>
-                            </span>*@
+                            <span class="m-badge m-badge--danger">2</span>
+                        </span>*@
                         </span>
                     </span>
                 </a>
@@ -20,7 +37,22 @@
                 <h4 class="m-menu__section-text">Cửa hàng</h4>
                 <i class="m-menu__section-icon flaticon-more-v2"></i>
             </li>
-            <li class="m-menu__item" aria-haspopup="true" >
+
+            <li class="m-menu__item @brand_active" aria-haspopup="true">
+                <a href="@Url.Action("Index", "AdminBrand")" class="m-menu__link ">
+                    <i class="m-menu__link-icon flaticon-line-graph"></i>
+                    <span class="m-menu__link-title">
+                        <span class="m-menu__link-wrap">
+                            <span class="m-menu__link-text" style="font-family:Tahoma">Nhãn hiệu</span>
+                            @*<span class="m-menu__link-badge">
+                            <span class="m-badge m-badge--danger">2</span>
+                        </span>*@
+                        </span>
+                    </span>
+                </a>
+            </li>
+
+            <li class="m-menu__item" aria-haspopup="true">
                 <a href="~/AdminDashboard/Product" class="m-menu__link ">
                     <i class="m-menu__link-icon flaticon-line-graph"></i>
                     <span class="m-menu__link-title">
@@ -39,19 +71,6 @@
                     <span class="m-menu__link-title">
                         <span class="m-menu__link-wrap">
                             <span class="m-menu__link-text" style="font-family:Tahoma">Bài Viết</span>
-                            @*<span class="m-menu__link-badge">
-                            <span class="m-badge m-badge--danger">2</span>
-                        </span>*@
-                        </span>
-                    </span>
-                </a>
-            </li>
-            <li class="m-menu__item" aria-haspopup="true">
-                <a href="~/AdminDashboard/Product" class="m-menu__link ">
-                    <i class="m-menu__link-icon flaticon-line-graph"></i>
-                    <span class="m-menu__link-title">
-                        <span class="m-menu__link-wrap">
-                            <span class="m-menu__link-text" style="font-family:Tahoma">Nhãn hiệu</span>
                             @*<span class="m-menu__link-badge">
                             <span class="m-badge m-badge--danger">2</span>
                         </span>*@
@@ -88,7 +107,7 @@
                                 </i>
                                 <span class="m-menu__link-text" style="font-family:Tahoma">Danh sách</span>
                             </a>
-                        </li>                  
+                        </li>
                         <li class="m-menu__item " aria-haspopup="true">
                             <a href="snippets/invoices/invoice-1.html" class="m-menu__link ">
                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -112,7 +131,7 @@
             <li class="m-menu__section ">
                 <h4 class="m-menu__section-text">Nhân viên</h4>
                 <i class="m-menu__section-icon flaticon-more-v2"></i>
-            </li>           
+            </li>
             <li class="m-menu__item" aria-haspopup="true">
                 <a href="~/AdminDashboard/Product" class="m-menu__link ">
                     <i class="m-menu__link-icon flaticon-line-graph"></i>
@@ -138,7 +157,7 @@
                         </span>
                     </span>
                 </a>
-            </li>           
+            </li>
         </ul>
     </div>
 
