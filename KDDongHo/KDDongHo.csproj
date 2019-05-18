@@ -165,6 +165,7 @@
     <Compile Include="Controllers\AdminBaseController.cs" />
     <Compile Include="Controllers\AdminBrandController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
+    <Compile Include="Controllers\AdminImageController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminProductController.cs" />
     <Compile Include="Controllers\AdminProductTypeController.cs" />
@@ -3134,7 +3135,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Static\Storage\Brand\" />
+    <Folder Include="Static\Storage\ProductImages\" />
     <Folder Include="Views\AdminBase\" />
+    <Folder Include="Views\AdminImage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

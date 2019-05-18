@@ -19,7 +19,7 @@ namespace KDDongHo.Controllers
         {
             if (Session["account_id"] == null)
             {
-                filterContext.Result = RedirectToAction("Login", "AdminLogin");
+                //filterContext.Result = RedirectToAction("Login", "AdminLogin");
             }
         }
     }
