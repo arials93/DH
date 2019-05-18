@@ -10,7 +10,7 @@ using KDDongHo.Models;
 
 namespace KDDongHo.Controllers
 {
-    public class AdminProductTypeController : Controller
+    public class AdminProductTypeController : AdminBaseController
     {
         private QLKD_DONGHOEntities db = new QLKD_DONGHOEntities();
 

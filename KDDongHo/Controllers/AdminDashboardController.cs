@@ -7,9 +7,9 @@ using KDDongHo.Models;
 
 namespace KDDongHo.Controllers
 {
-    public class AdminDashboardController : Controller
+    public class AdminDashboardController : AdminBaseController
     {
-        QLKD_DONGHOEntities db_connect = new QLKD_DONGHOEntities();
+        QLKD_DONGHOEntities db = new QLKD_DONGHOEntities();
         //
         // GET: /Admin/
         public ActionResult Index()

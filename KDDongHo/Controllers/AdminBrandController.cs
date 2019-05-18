@@ -10,7 +10,7 @@ using KDDongHo.Models;
 
 namespace KDDongHo.Controllers
 {
-    public class AdminBrandController : Controller
+    public class AdminBrandController : AdminBaseController
     {
         private QLKD_DONGHOEntities db = new QLKD_DONGHOEntities();
         const String IMAGE_PATH = "/Static/Storage/Brand";

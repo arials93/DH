@@ -162,6 +162,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AdminBaseController.cs" />
     <Compile Include="Controllers\AdminBrandController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
@@ -3133,7 +3134,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Static\Storage\Brand\" />
-    <Folder Include="Views\AdminLogin\" />
+    <Folder Include="Views\AdminBase\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -3268,10 +3269,6 @@
     <Content Include="Views\WebHome\Index.cshtml" />
     <Content Include="Views\AdminDashboard\Index.cshtml" />
     <Content Include="Views\WebHome\Product.cshtml" />
-    <Content Include="Views\AdminDashboard\Product.cshtml" />
-    <Content Include="Views\AdminDashboard\AddProduct.cshtml" />
-    <Content Include="Views\AdminDashboard\Brand.cshtml" />
-    <Content Include="Views\AdminDashboard\Series.cshtml" />
     <Content Include="Static\Admin\assets\vendors\base\fonts\flaticon\Flaticon.eot" />
     <Content Include="Static\Admin\assets\vendors\base\fonts\flaticon\Flaticon.ttf" />
     <Content Include="Static\Admin\assets\vendors\base\fonts\flaticon\Flaticon.woff" />
@@ -3321,6 +3318,7 @@
     <Content Include="Views\AdminProductType\Details.cshtml" />
     <Content Include="Views\AdminProductType\Edit.cshtml" />
     <Content Include="Views\AdminProductType\Index.cshtml" />
+    <Content Include="Views\AdminLogin\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
