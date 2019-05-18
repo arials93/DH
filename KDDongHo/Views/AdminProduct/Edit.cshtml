@@ -1,0 +1,142 @@
+﻿@model KDDongHo.Models.DONG_HO
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>DONG_HO</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MAUMA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MAUMA)
+                @Html.ValidationMessageFor(model => model.MAUMA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KICHCO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KICHCO)
+                @Html.ValidationMessageFor(model => model.KICHCO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DODAY, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DODAY)
+                @Html.ValidationMessageFor(model => model.DODAY)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CHATLIEU_VO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CHATLIEU_VO)
+                @Html.ValidationMessageFor(model => model.CHATLIEU_VO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CHATLIEU_DAY, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CHATLIEU_DAY)
+                @Html.ValidationMessageFor(model => model.CHATLIEU_DAY)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CHATLIEU_KINH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CHATLIEU_KINH)
+                @Html.ValidationMessageFor(model => model.CHATLIEU_KINH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DOCHIEUNUOC, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DOCHIEUNUOC)
+                @Html.ValidationMessageFor(model => model.DOCHIEUNUOC)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BAOHANH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BAOHANH)
+                @Html.ValidationMessageFor(model => model.BAOHANH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DONGIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DONGIA)
+                @Html.ValidationMessageFor(model => model.DONGIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NGAYDANG, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NGAYDANG)
+                @Html.ValidationMessageFor(model => model.NGAYDANG)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GIAMGIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GIAMGIA)
+                @Html.ValidationMessageFor(model => model.GIAMGIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_HANGSX, "ID_HANGSX", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_HANGSX", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_HANGSX)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_KIEUMAY, "ID_KIEUMAY", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_KIEUMAY", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_KIEUMAY)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MOI, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MOI)
+                @Html.ValidationMessageFor(model => model.MOI)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

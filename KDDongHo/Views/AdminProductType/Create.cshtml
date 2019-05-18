@@ -1,0 +1,108 @@
+﻿@model KDDongHo.Models.KIEU_MAY
+
+@{
+    ViewBag.Title = "Thêm kiểu máy";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+@section styles{
+
+}
+
+@section subheader{
+    <div class="m-subheader d-flex">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator ">Thêm kiểu máy</h3>
+            </div>
+        </div>
+        <div class="m-portlet__nav-item ml-auto">
+            <a href="@Url.Action("Index", "AdminProductType")" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-arrow-left"></i>
+                    <span>Quay lại</span>
+                </span>
+            </a>
+
+            <a href="#" id="submit_form" class="btn btn-primary m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-save"></i>
+                    <span>Lưu lại</span>
+                </span>
+            </a>
+        </div>
+    </div>
+}
+
+<div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2 col-form-label">Tên</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.TEN, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.TEN, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="GHICHU" class="col-2 col-form-label">Ghi chú</label>
+                        <div class="col-10">
+                            @Html.TextArea("GHICHU", null, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.GHICHU, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@*<h2>Create</h2>*@
+
+@*@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>KIEU_MAY</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TEN, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TEN)
+                @Html.ValidationMessageFor(model => model.TEN)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GHICHU, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GHICHU)
+                @Html.ValidationMessageFor(model => model.GHICHU)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+@section scripts {
+    @Scripts.Render("~/Static/Admin/assets/app/js/my-script.js")
+}

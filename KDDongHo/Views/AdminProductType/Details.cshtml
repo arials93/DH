@@ -1,0 +1,35 @@
+﻿@model KDDongHo.Models.KIEU_MAY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KIEU_MAY</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GHICHU)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

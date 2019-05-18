@@ -2,6 +2,7 @@
 @{
     var dashboard_active = "";
     var brand_active = "";
+    var product_type_active = "";
 }
 
 @if (Request.Url.ToString().Contains("AdminDashboard"))
@@ -12,6 +13,11 @@
 @if (Request.Url.ToString().Contains("AdminBrand"))
 {
     brand_active = "m-menu__item--active";
+}
+
+@if (Request.Url.ToString().Contains("AdminProductType"))
+{
+    product_type_active = "m-menu__item--active";
 }
 
 <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
@@ -44,6 +50,20 @@
                     <span class="m-menu__link-title">
                         <span class="m-menu__link-wrap">
                             <span class="m-menu__link-text" style="font-family:Tahoma">Nhãn hiệu</span>
+                            @*<span class="m-menu__link-badge">
+                            <span class="m-badge m-badge--danger">2</span>
+                        </span>*@
+                        </span>
+                    </span>
+                </a>
+            </li>
+
+            <li class="m-menu__item @product_type_active" aria-haspopup="true">
+                <a href="@Url.Action("Index", "AdminProductType")" class="m-menu__link ">
+                    <i class="m-menu__link-icon flaticon-line-graph"></i>
+                    <span class="m-menu__link-title">
+                        <span class="m-menu__link-wrap">
+                            <span class="m-menu__link-text" style="font-family:Tahoma">Kiểu máy</span>
                             @*<span class="m-menu__link-badge">
                             <span class="m-badge m-badge--danger">2</span>
                         </span>*@
