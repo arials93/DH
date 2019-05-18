@@ -65,6 +65,7 @@ namespace KDDongHo.Controllers
 
                 db.HANG_SX.Add(hANG_SX);
                 db.SaveChanges();
+                TempData["success"] = "Thêm nhãn hiệu thành công";
                 return RedirectToAction("Index");
             }
 
@@ -117,6 +118,7 @@ namespace KDDongHo.Controllers
                 hangsx.GIOITHIEU = hANG_SX.GIOITHIEU;
 
                 db.SaveChanges();
+                TempData["success"] = "Sửa nhãn hiệu thành công";
                 return RedirectToAction("Index");
             }
             return View(hANG_SX);
@@ -152,6 +154,7 @@ namespace KDDongHo.Controllers
             }
             db.HANG_SX.Remove(hANG_SX);
             db.SaveChanges();
+            TempData["success"] = "Xóa nhãn hiệu thành công";
             return RedirectToAction("Index");
         }
 

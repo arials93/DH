@@ -1,7 +1,7 @@
 ﻿@model KDDongHo.Models.HANG_SX
 
 @{
-    ViewBag.Title = "Tạo Hãng sản xuất";
+    ViewBag.Title = "Thêm nhãn hiệu";
     Layout = "~/Views/Admin_Shared/_Layout.cshtml";
 }
 
@@ -13,7 +13,7 @@
     <div class="m-subheader d-flex">
         <div class="d-flex align-items-center">
             <div class="mr-auto">
-                <h3 class="m-subheader__title m-subheader__title--separator ">Tạo hãng sản xuất</h3>
+                <h3 class="m-subheader__title m-subheader__title--separator ">Thêm nhãn hiệu</h3>
             </div>
         </div>
         <div class="m-portlet__nav-item ml-auto">
@@ -27,52 +27,12 @@
             <a href="#" id="submit_form" class="btn btn-primary m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
                 <span>
                     <i class="la la-save"></i>
-                    <span>Tạo mới</span>
+                    <span>Lưu lại</span>
                 </span>
             </a>
         </div>
     </div>
 }
-
-
-@*@using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <hr />
-            @Html.ValidationSummary(true)
-            <div class="form-group">
-                @Html.LabelFor(model => model.TEN, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.TEN)
-                    @Html.ValidationMessageFor(model => model.TEN)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.LOGO, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.LOGO)
-                    @Html.ValidationMessageFor(model => model.LOGO)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.GIOITHIEU, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.GIOITHIEU)
-                    @Html.ValidationMessageFor(model => model.GIOITHIEU)
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
-        </div>
-    }*@
 
 <div class="m-portlet m-portlet--mobile">
     <div class="m-portlet__body">
@@ -87,8 +47,8 @@
                         Xem trước ảnh
                     </p>
                     <label class="btn btn-primary mx-auto">
-                        <i class="la la-folder-open"></i>
-                        <input class="d-none" id="LOGO" name="LOGO" type="file">
+                        Chọn hình
+                        <input class=" d-none" id="LOGO" name="LOGO" type="file">
                     </label>
 
                     @Html.ValidationMessageFor(model => model.LOGO, "", new { @class = "form-control-feedback" })
@@ -100,15 +60,15 @@
                         <label for="TEN" class="col-2 col-form-label">Tên</label>
                         <div class="col-10">
                             @Html.TextBoxFor(model => model.TEN, new { @class = "form-control m-input" })
-                            @Html.ValidationMessageFor(model => model.TEN, "", new { @class = "form-control-feedback" })
+                            @Html.ValidationMessageFor(model => model.TEN, "", new { @class = "form-control-feedback text-danger"})
                         </div>
                     </div>
 
                     <div class="form-group m-form__group row">
-                        <label for="GIOITHIEU" class="col-2 col-form-label">Mô tả</label>
+                        <label for="GIOITHIEU" class="col-2 col-form-label">Giới thiệu</label>
                         <div class="col-10">
                             @Html.TextArea("GIOITHIEU", null, new { @class = "form-control m-input" })
-                            @Html.ValidationMessageFor(model => model.GIOITHIEU, "", new { @class = "form-control-feedback" })
+                            @Html.ValidationMessageFor(model => model.GIOITHIEU, "", new { @class = "form-control-feedback text-danger"})
                         </div>
                     </div>
                 </div>

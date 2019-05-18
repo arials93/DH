@@ -93,5 +93,11 @@
     @Scripts.Render("~/Static/Admin/assets/app/js/dashboard.js")
 
     @RenderSection("scripts", required: false)
+    <script>
+    if ("@TempData["Success"]") {
+        swal({ type: "success", title: "@TempData["Success"]", showConfirmButton: !1, timer: 1500 })
+    }
+    </script>
+    
 </body>
 </html>

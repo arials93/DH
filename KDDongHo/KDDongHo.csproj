@@ -164,6 +164,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AdminBrandController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
+    <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\AdminProductController.cs" />
+    <Compile Include="Controllers\AdminProductTypeController.cs" />
     <Compile Include="Controllers\WebHomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -3130,6 +3133,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Static\Storage\Brand\" />
+    <Folder Include="Views\AdminLogin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -3302,7 +3306,21 @@
     <Content Include="Views\Admin_Shared\Partials\_modal.cshtml" />
     <Content Include="Views\Web_Shared\Partials\_slide.cshtml" />
     <Content Include="Views\Web_Shared\Partials\_titlepage.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\AdminBrand\Create.cshtml" />
+    <Content Include="Views\AdminBrand\Delete.cshtml" />
+    <Content Include="Views\AdminBrand\Details.cshtml" />
+    <Content Include="Views\AdminBrand\Edit.cshtml" />
+    <Content Include="Views\AdminBrand\Index.cshtml" />
+    <Content Include="Views\AdminProduct\Create.cshtml" />
+    <Content Include="Views\AdminProduct\Delete.cshtml" />
+    <Content Include="Views\AdminProduct\Details.cshtml" />
+    <Content Include="Views\AdminProduct\Edit.cshtml" />
+    <Content Include="Views\AdminProduct\Index.cshtml" />
+    <Content Include="Views\AdminProductType\Create.cshtml" />
+    <Content Include="Views\AdminProductType\Delete.cshtml" />
+    <Content Include="Views\AdminProductType\Details.cshtml" />
+    <Content Include="Views\AdminProductType\Edit.cshtml" />
+    <Content Include="Views\AdminProductType\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
