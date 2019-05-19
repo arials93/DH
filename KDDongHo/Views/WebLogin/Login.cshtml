@@ -1,0 +1,118 @@
+﻿@model KDDongHo.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Web_Shared/_Layout.cshtml";
+}
+
+@*<h2>View1</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>KHACH_HANG</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HOTEN, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HOTEN)
+                @Html.ValidationMessageFor(model => model.HOTEN)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NGAYSINH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NGAYSINH)
+                @Html.ValidationMessageFor(model => model.NGAYSINH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DIACHI, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DIACHI)
+                @Html.ValidationMessageFor(model => model.DIACHI)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SDT, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SDT)
+                @Html.ValidationMessageFor(model => model.SDT)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMAIL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMAIL)
+                @Html.ValidationMessageFor(model => model.EMAIL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PASS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PASS)
+                @Html.ValidationMessageFor(model => model.PASS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+<section class="bgwhite p-t-66 p-b-60">
+    <div class="container">
+        <div class="row">
+            
+                <form class="leave-comment w-50 mx-auto">
+                    <h4 class="m-text26 p-b-36 p-t-15 text-center">
+                        Đăng nhập
+                    </h4>
+
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Email">
+                    </div>
+
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Mật khẩu">
+                    </div>
+                    
+                    <div class="d-flex mx-auto" >
+                        <div class="d-flex mx-auto">
+                            <div class="w-size25 m-r-5">
+                                <!-- Button -->
+                                <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                                    Đăng ký
+                                </button>
+                            </div>
+                            <div class="w-size25">
+                                <!-- Button -->
+                                <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+           
+        </div>
+    </div>
+</section>

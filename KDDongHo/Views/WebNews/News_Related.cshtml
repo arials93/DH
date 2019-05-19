@@ -1,0 +1,87 @@
+﻿@model IEnumerable<KDDongHo.Models.BAI_VIET>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ND_TOMTAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOIDUNG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYDANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOAITIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUYET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOI_DUNG.NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ND_TOMTAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOIDUNG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYDANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOAITIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUYET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOI_DUNG.NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>*@
+@foreach (var item in Model)
+{
+    <li class="flex-w p-b-20">
+        <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
+            <img src="@item.HINH" alt="IMG-PRODUCT">
+        </a>
+
+        <div class="w-size23 p-t-5">
+            <a href="@Url.Action("News_Detail", "WebNews", new { id = item.ID})" class="s-text20">
+                @item.TEN
+            </a>
+
+            <span class="dis-block s-text17 p-t-6">
+                Bởi @item.NGUOI_DUNG.HOTEN
+            </span>
+        </div>
+    </li>
+}

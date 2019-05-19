@@ -164,10 +164,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AdminBrandController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
-    <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminProductController.cs" />
     <Compile Include="Controllers\AdminProductTypeController.cs" />
+    <Compile Include="Controllers\WebBrandController.cs" />
     <Compile Include="Controllers\WebHomeController.cs" />
+    <Compile Include="Controllers\WebLoginController.cs" />
+    <Compile Include="Controllers\WebNewsController.cs" />
+    <Compile Include="Controllers\WebProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,16 +232,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Static\Admin\assets\app\js\dashboard.js" />
     <Content Include="Static\Admin\assets\app\js\layout-builder.js" />
     <Content Include="Static\Admin\assets\app\js\my-script.js" />
@@ -3133,7 +3126,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Static\Storage\Brand\" />
-    <Folder Include="Views\AdminLogin\" />
+    <Folder Include="Views\WebBrand\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -3141,8 +3134,18 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Views\Admin_Shared\_Layout.cshtml" />
@@ -3267,7 +3270,6 @@
     <Content Include="Static\Web\vendor\slick\slick.scss" />
     <Content Include="Views\WebHome\Index.cshtml" />
     <Content Include="Views\AdminDashboard\Index.cshtml" />
-    <Content Include="Views\WebHome\Product.cshtml" />
     <Content Include="Views\AdminDashboard\Product.cshtml" />
     <Content Include="Views\AdminDashboard\AddProduct.cshtml" />
     <Content Include="Views\AdminDashboard\Brand.cshtml" />
@@ -3321,6 +3323,17 @@
     <Content Include="Views\AdminProductType\Details.cshtml" />
     <Content Include="Views\AdminProductType\Edit.cshtml" />
     <Content Include="Views\AdminProductType\Index.cshtml" />
+    <Content Include="Views\WebProduct\Products.cshtml" />
+    <Content Include="Views\WebNews\News.cshtml" />
+    <Content Include="Views\WebProduct\Products_Brand.cshtml" />
+    <Content Include="Views\WebNews\News_All.cshtml" />
+    <Content Include="Views\WebNews\About.cshtml" />
+    <Content Include="Views\WebProduct\Product_Detail.cshtml" />
+    <Content Include="Views\WebNews\News_Detail.cshtml" />
+    <Content Include="Views\WebProduct\Product_Related.cshtml" />
+    <Content Include="Views\WebNews\News_Related.cshtml" />
+    <Content Include="Views\WebProduct\Product_All_News.cshtml" />
+    <Content Include="Views\WebLogin\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

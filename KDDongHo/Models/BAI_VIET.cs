@@ -17,6 +17,7 @@ namespace KDDongHo.Models
         public int ID { get; set; }
         public string TEN { get; set; }
         public string HINH { get; set; }
+        public string ND_TOMTAT { get; set; }
         public string NOIDUNG { get; set; }
         public Nullable<System.DateTime> NGAYDANG { get; set; }
         public string LOAITIN { get; set; }

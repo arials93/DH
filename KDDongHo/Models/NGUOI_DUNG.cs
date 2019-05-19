@@ -14,7 +14,6 @@ namespace KDDongHo.Models
     
     public partial class NGUOI_DUNG
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NGUOI_DUNG()
         {
             this.BAI_VIET = new HashSet<BAI_VIET>();
@@ -31,9 +30,7 @@ namespace KDDongHo.Models
         public Nullable<bool> TRANGTHAI { get; set; }
         public Nullable<bool> IS_SUPER_USER { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BAI_VIET> BAI_VIET { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHAN_QUYEN> PHAN_QUYEN { get; set; }
     }
 }

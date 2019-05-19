@@ -14,7 +14,6 @@ namespace KDDongHo.Models
     
     public partial class QUYEN_LOI
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public QUYEN_LOI()
         {
             this.PHAN_QUYEN = new HashSet<PHAN_QUYEN>();
@@ -24,7 +23,6 @@ namespace KDDongHo.Models
         public string LOAIHINH { get; set; }
         public string NOIDUNG { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHAN_QUYEN> PHAN_QUYEN { get; set; }
     }
 }

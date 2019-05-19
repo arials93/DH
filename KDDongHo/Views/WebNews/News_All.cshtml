@@ -1,0 +1,185 @@
+﻿@model IEnumerable<KDDongHo.Models.BAI_VIET>
+
+@{
+    ViewBag.Title = "Tin tức";
+    Layout = "~/Views/Web_Shared/_Layout.cshtml";
+}
+
+@*<h2>News_All</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOIDUNG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYDANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOAITIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUYET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOI_DUNG.NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOIDUNG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYDANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOAITIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUYET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOI_DUNG.NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+@RenderPage("~/Views/Web_Shared/Partials/_titlepage.cshtml")
+<!-- content page -->
+<section class="bgwhite p-t-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-9 p-b-75">
+                <div class="p-r-50 p-r-0-lg">
+                    <!-- item blog -->
+
+                    @foreach (var item in Model) 
+                    {
+                        <div class="item-blog p-b-80">
+                            <a href="@Url.Action("News_Detail", "WebNews", new { id = item.ID})" class="item-blog-img pos-relative dis-block hov-img-zoom">
+                                <img src="@item.HINH" alt="IMG-BLOG">
+
+                                <span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
+                                    @String.Format("{0:dd/MM/yyyy}", item.NGAYDANG)
+                                </span>
+                            </a>
+
+                            <div class="item-blog-txt p-t-33">
+                                <h4 class="p-b-11">
+                                    <a href="@Url.Action("News_Detail", "WebNews", new { id = item.ID})" class="m-text24">
+                                        @item.TEN
+                                    </a>
+                                </h4>
+
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                    <span>
+                                        Bởi @item.NGUOI_DUNG.HOTEN
+                                        <span class="m-l-3 m-r-6">|</span>
+                                    </span>
+
+                                    <span>
+                                        @item.LOAITIN
+                                        <span class="m-l-3 m-r-6">|</span>
+                                    </span>
+                                </div>
+
+                                <p class="p-b-12">
+                                    @item.ND_TOMTAT
+                                </p>
+
+                                <a href="@Url.Action("News_Detail", "WebNews", new { id = item.ID})" class="s-text20">
+                                    Đọc thêm
+                                    <i class="fa fa-long-arrow-right m-l-8" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination flex-m flex-w p-r-50">
+                    <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
+                    <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 p-b-75">
+                <div class="rightbar">
+                    <!-- Search -->
+                    <div class="pos-relative bo11 of-hidden">
+                        <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search">
+
+                        <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+                            <i class="fs-13 fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Categories -->
+                    <h4 class="m-text23 p-t-56 p-b-34">
+                        Thương hiệu
+                    </h4>
+
+                    <ul>
+                        @foreach(var item in ViewBag.Brand)
+                        {
+                            <li class="p-t-6 p-b-8 bo6">
+                                <a href="@Url.Action("Product_Brand", "WebProduct", new { id = item.ID})" class="s-text13 p-t-5 p-b-5">
+                                    @item.TEN
+                                </a>
+                            </li>
+                        }
+                            
+                    </ul>
+
+                    <!-- Featured Products -->
+                    <h4 class="m-text23 p-t-65 p-b-34">
+                        Sản phẩm mới
+                    </h4>
+
+                    <ul class="bgwhite">
+                        
+                        @{Html.RenderAction("Product_All_News", "WebProduct");}
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Back to top -->
+<div class="btn-back-to-top bg0-hov" id="myBtn">
+    <span class="symbol-btn-back-to-top">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </span>
+</div>
+
+<!-- Container Selection -->
+<div id="dropDownSelect1"></div>
+<div id="dropDownSelect2"></div>

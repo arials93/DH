@@ -1,0 +1,123 @@
+﻿@model IEnumerable<KDDongHo.Models.DONG_HO>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAUMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KICHCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DODAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHATLIEU_VO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHATLIEU_DAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHATLIEU_KINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOCHIEUNUOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAOHANH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DONGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYDANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIAMGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HANG_SX.TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KIEU_MAY.TEN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAUMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KICHCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DODAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHATLIEU_VO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHATLIEU_DAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHATLIEU_KINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOCHIEUNUOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAOHANH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DONGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYDANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIAMGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HANG_SX.TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KIEU_MAY.TEN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>*@
+@foreach(var item in Model)
+{
+    <li class="flex-w p-b-20">
+        <a href="@Url.Action("Product_Detail","WebProduct",new {id = item.ID})" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
+            <img src="@item.HINH_ANH.First().URL" alt="IMG-PRODUCT">
+        </a>
+
+        <div class="w-size23 p-t-5">
+            <a href="@Url.Action("Product_Detail","WebProduct",new {id = item.ID})" class="s-text20">
+                @item.HANG_SX.TEN @item.MAUMA @item.KIEU_MAY.TEN
+            </a>
+
+            <span class="dis-block s-text17 p-t-6">
+                @string.Format("{0:0,0 VND}", @item.DONGIA)s
+            </span>
+        </div>
+    </li>
+}

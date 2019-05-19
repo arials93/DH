@@ -14,7 +14,6 @@ namespace KDDongHo.Models
     
     public partial class KHACH_HANG
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACH_HANG()
         {
             this.DON_HANG = new HashSet<DON_HANG>();
@@ -29,9 +28,7 @@ namespace KDDongHo.Models
         public string EMAIL { get; set; }
         public string PASS { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DON_HANG> DON_HANG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LUOT_LIKE> LUOT_LIKE { get; set; }
     }
 }

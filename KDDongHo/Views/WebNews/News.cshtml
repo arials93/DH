@@ -1,0 +1,90 @@
+﻿@model IEnumerable<KDDongHo.Models.BAI_VIET>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOIDUNG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYDANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOAITIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUYET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOI_DUNG.NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOIDUNG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYDANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOAITIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUYET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOI_DUNG.NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+        <!-- Block3 -->
+        <div class="block3">
+            <a href="@Url.Action("News_Detail", "WebNews", new { id = item.ID})" class="block3-img dis-block hov-img-zoom">
+                <img src="@item.HINH" alt="IMG-BLOG">
+            </a>
+
+            <div class="block3-txt p-t-14">
+                <h4 class="p-b-7">
+                    <a href="@Url.Action("News_Detail", "WebNews", new { id = item.ID})" class="m-text11">
+                        @item.TEN
+                    </a>
+                </h4>
+
+                <span class="s-text6">Bởi</span> <span class="s-text7">@item.NGUOI_DUNG.HOTEN</span>
+                <span class="s-text6">vào</span> <span class="s-text7">@String.Format("{0:dd/MM/yyyy}", item.NGAYDANG)</span>
+
+                <p class="s-text8 p-t-16">
+                    @item.ND_TOMTAT
+                </p>
+            </div>
+        </div>
+    </div>  
+}

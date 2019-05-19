@@ -17,6 +17,7 @@ namespace KDDongHo.Models
         public int ID { get; set; }
         public int ID_KHACHHANG { get; set; }
         public int ID_DONGHO { get; set; }
+        public Nullable<bool> TRANGTHAI { get; set; }
     
         public virtual DONG_HO DONG_HO { get; set; }
         public virtual KHACH_HANG KHACH_HANG { get; set; }

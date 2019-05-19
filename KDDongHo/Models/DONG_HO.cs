@@ -11,11 +11,9 @@ namespace KDDongHo.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class DONG_HO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DONG_HO()
         {
             this.DAT_HANG = new HashSet<DAT_HANG>();
@@ -24,7 +22,6 @@ namespace KDDongHo.Models
         }
     
         public int ID { get; set; }
-        [Required(ErrorMessage = "Vui lòng nhập mẫu mã")]
         public string MAUMA { get; set; }
         public Nullable<double> KICHCO { get; set; }
         public Nullable<double> DODAY { get; set; }
@@ -32,27 +29,18 @@ namespace KDDongHo.Models
         public string CHATLIEU_DAY { get; set; }
         public string CHATLIEU_KINH { get; set; }
         public Nullable<int> DOCHIEUNUOC { get; set; }
-
-        [Required(ErrorMessage = "Vui lòng nhập năm bảo hành")]
         public string BAOHANH { get; set; }
-        
-        [Required(ErrorMessage = "Vui lòng nhập đơn giá")]
-        [RegularExpression(@"/(^\(\d{10})?)$/", ErrorMessage = "Chỉ được nhập số")]
-        public double DONGIA { get; set; }       
+        public double DONGIA { get; set; }
         public Nullable<System.DateTime> NGAYDANG { get; set; }
-        [Required(ErrorMessage = "Vui lòng nhập giảm giá")]
-        public Nullable<int> GIAMGIA { get; set; }
         public int ID_HANGSX { get; set; }
+        public Nullable<int> GIAMGIA { get; set; }
         public int ID_KIEUMAY { get; set; }
         public Nullable<bool> MOI { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DAT_HANG> DAT_HANG { get; set; }
         public virtual HANG_SX HANG_SX { get; set; }
         public virtual KIEU_MAY KIEU_MAY { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HINH_ANH> HINH_ANH { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LUOT_LIKE> LUOT_LIKE { get; set; }
     }
 }
