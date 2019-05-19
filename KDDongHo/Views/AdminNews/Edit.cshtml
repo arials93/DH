@@ -1,0 +1,213 @@
+﻿@model KDDongHo.Models.BAI_VIET
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+@section styles{
+
+}
+
+@section subheader{
+    <div class="m-subheader d-flex">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator ">Thêm nhãn hiệu</h3>
+            </div>
+        </div>
+        <div class="m-portlet__nav-item ml-auto">
+            <a href="@Url.Action("Index", "AdminNews")" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-arrow-left"></i>
+                    <span>Quay lại</span>
+                </span>
+            </a>
+
+            <a href="#" id="submit_form" class="btn btn-primary m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-save"></i>
+                    <span>Lưu lại</span>
+                </span>
+            </a>
+        </div>
+    </div>
+}
+
+<div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="submit" hidden id="trigger_submit" class="btn btn-default" />
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <p class="d-flex align-items-center justify-content-center" style="border: 4px solid #efefef; min-height: 80px; width: 100%" id="preview_image">
+                        <img src="@Model.HINH" class="img-fluid" />
+                    </p>
+                    <label class="btn btn-primary mx-auto">
+                        Chọn hình
+                        <input class=" d-none" id="HINH" name="HINH" type="file">
+                    </label>
+
+                    @Html.ValidationMessageFor(model => model.HINH, "", new { @class = "form-control-feedback" })
+
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2 col-form-label">Tên</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.TEN, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.TEN, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="LOAITIN" class="col-2 col-form-label">Loại tin</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.LOAITIN, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.LOAITIN, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="ND_TOMTAT" class="col-2 col-form-label">Tóm tắt</label>
+                        <div class="col-10">
+                            @Html.TextAreaFor(model => model.ND_TOMTAT, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.ND_TOMTAT, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="NOIDUNG" class="col-2 col-form-label">Nội dung</label>
+                        <div class="col-10">
+                            @Html.TextArea("NOIDUNG", null, new { @class = "form-control m-input summernote" })
+                            @Html.ValidationMessageFor(model => model.NOIDUNG, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/Static/Admin/assets/app/js/my-script.js")
+    <script>
+        $(".summernote").summernote({ height: 400 });
+        $("#HINH").change(function () {
+            readURL(this);
+        });
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+
+
+                reader.onload = function (e) {
+
+                    $('#preview_image').html(`<img src="${e.target.result}" class="img-fluid"/>`);
+
+                }
+
+
+
+                reader.readAsDataURL(input.files[0]);
+
+            }
+
+        }
+    </script>
+}
+
+@*<h2>Edit</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>BAI_VIET</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TEN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TEN)
+                    @Html.ValidationMessageFor(model => model.TEN)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HINH, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HINH)
+                    @Html.ValidationMessageFor(model => model.HINH)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NOIDUNG, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NOIDUNG)
+                    @Html.ValidationMessageFor(model => model.NOIDUNG)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NGAYDANG, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NGAYDANG)
+                    @Html.ValidationMessageFor(model => model.NGAYDANG)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LOAITIN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LOAITIN)
+                    @Html.ValidationMessageFor(model => model.LOAITIN)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_NGUOIDUNG, "ID_NGUOIDUNG", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("ID_NGUOIDUNG", String.Empty)
+                    @Html.ValidationMessageFor(model => model.ID_NGUOIDUNG)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DUYET, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DUYET)
+                    @Html.ValidationMessageFor(model => model.DUYET)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

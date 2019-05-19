@@ -1,0 +1,210 @@
+﻿@model KDDongHo.Models.NGUOI_DUNG
+
+@{
+    ViewBag.Title = "Sửa tài khoản";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+@section subheader{
+    <div class="m-subheader d-flex">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator ">Sửa tài khoản</h3>
+            </div>
+        </div>
+        <div class="m-portlet__nav-item ml-auto">
+            <a href="@Url.Action("Index", "AdminAccount")" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-arrow-left"></i>
+                    <span>Quay lại</span>
+                </span>
+            </a>
+            <a href="#" id="submit_form" class="btn btn-primary m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-save"></i>
+                    <span>Lưu lại</span>
+                </span>
+            </a>
+        </div>
+    </div>
+}
+
+<div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+        @using (Html.BeginForm())
+        {
+            <input type="submit" hidden id="trigger_submit" class="btn btn-default" />
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="form-group m-form__group row">
+                        <label for="NAME" class="col-2 col-form-label">Tên tài khoản</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.NAME, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.NAME, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label for="HOTEN" class="col-2 col-form-label">Họ tên</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.HOTEN, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.HOTEN, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label for="NGAYSINH" class="col-2 col-form-label">Ngày sinh</label>
+                        <div class="col-10">
+                            <div class="input-group date">
+                                @Html.TextBoxFor(model => model.NGAYSINH, new { @class = "form-control m-input", @readonly = "readonly" })
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="la la-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.NGAYSINH, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label for="SDT" class="col-2 col-form-label">SĐT</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.SDT, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label for="DIACHI" class="col-2 col-form-label">Địa chỉ</label>
+                        <div class="col-10">
+                            @Html.TextBoxFor(model => model.DIACHI, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.DIACHI, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label for="PASS" class="col-2 col-form-label">Mật khẩu</label>
+                        <div class="col-10">
+                            @Html.PasswordFor(model => model.PASS, new { @class = "form-control m-input" })
+                            @Html.ValidationMessageFor(model => model.PASS, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label for="IS_SUPER_USER" class="col-2 col-form-label">Là quản lý</label>
+                        <div class="col-10">
+                            <label class="m-checkbox m-checkbox--state-success">
+                                @Html.CheckBox("IS_SUPER_USER", Model.IS_SUPER_USER.Value, new { @class = "form-control m-input" })
+                                <span></span>
+                            </label>
+                           
+                            @Html.ValidationMessageFor(model => model.IS_SUPER_USER, "", new { @class = "form-control-feedback text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/Static/Admin/assets/app/js/my-script.js")
+    <script>
+         $("#NGAYSINH").datepicker({
+            rtl: mUtil.isRTL(), todayBtn: "linked", clearBtn: !0, todayHighlight: !0, templates: t, format: 'mm/dd/yyyy'
+        });
+    </script>
+}
+
+@*<h2>Edit</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>NGUOI_DUNG</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NAME)
+                    @Html.ValidationMessageFor(model => model.NAME)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PASS, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PASS)
+                    @Html.ValidationMessageFor(model => model.PASS)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HOTEN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HOTEN)
+                    @Html.ValidationMessageFor(model => model.HOTEN)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NGAYSINH, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NGAYSINH)
+                    @Html.ValidationMessageFor(model => model.NGAYSINH)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DIACHI, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DIACHI)
+                    @Html.ValidationMessageFor(model => model.DIACHI)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SDT, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SDT)
+                    @Html.ValidationMessageFor(model => model.SDT)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TRANGTHAI, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TRANGTHAI)
+                    @Html.ValidationMessageFor(model => model.TRANGTHAI)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IS_SUPER_USER, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IS_SUPER_USER)
+                    @Html.ValidationMessageFor(model => model.IS_SUPER_USER)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

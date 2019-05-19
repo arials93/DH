@@ -1,0 +1,75 @@
+﻿@model KDDongHo.Models.BAI_VIET
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BAI_VIET</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOIDUNG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOIDUNG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYDANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYDANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAITIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAITIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DUYET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DUYET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGUOI_DUNG.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGUOI_DUNG.NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

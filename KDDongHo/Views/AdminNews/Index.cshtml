@@ -1,0 +1,162 @@
+﻿@model IEnumerable<KDDongHo.Models.BAI_VIET>
+
+@{
+    ViewBag.Title = "Bài viết";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+@section styles{
+    @Styles.Render("~/Static/Admin/assets/vendors/custom/datatables/datatables.bundle.css")
+}
+
+@section subheader{
+    <div class="m-subheader d-flex">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator ">Danh sách bài viết</h3>
+            </div>
+        </div>
+        <div class="m-portlet__nav-item ml-auto">
+            <a href="@Url.Action("Create", "AdminNews")" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-plus"></i>
+                    <span>Thên mới</span>
+                </span>
+            </a>
+        </div>
+    </div>
+}
+
+<div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+        <table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Người tạo</th>
+                    <th>Hình</th>
+                    <th>Loại tin</th>
+                    <th>Duyệt</th>
+                    <th width="120">Điều chỉnh</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @item.ID
+                    </td>
+                    <td>
+                        @item.TEN
+                    </td>
+                    <td>
+                        @item.NGUOI_DUNG.HOTEN
+                    </td>
+                    <td>
+                        <img src="@item.HINH" width="120" />
+                    </td>
+                    <td>
+                        @item.LOAITIN
+                    </td>
+                    <td>
+                        @if (item.DUYET == true)
+                        {
+                            <p>Đã duyệt</p>
+                        }
+                        else
+                        {
+                            <a data-toggle="modal" class="censored_confirm" data-url="@Url.Action("Censored", "AdminNews", new { id = item.ID })" data-target="#censored_confirm" href="#">Duyệt</a>
+                        }
+                    </td>
+
+                    <td>
+                        <a href="@Url.Action("Edit", "AdminNews", new { id = item.ID })" class="btn m-btn btn-sm btn-primary m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+                            <i class="la la-edit"></i>
+                        </a>
+                        <a href="#" data-url="@Url.Action("Delete", "AdminNews", new { id = item.ID })" data-toggle="modal" data-target="#delete_confirm"
+                           class="delete_confirm btn m-btn btn-sm m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill btn-danger">
+                            <i class="la la-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@RenderPage("~/Views/Admin_Shared/Partials/_modal.cshtml")
+
+@section scripts{
+    @Scripts.Render("~/Static/Admin/assets/vendors/custom/datatables/datatables.bundle.js")
+    @Scripts.Render("~/Static/Admin/assets/app/js/my-script.js")
+    <script>
+        $('#m_table_1').DataTable();
+    </script>
+}
+
+@*<h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HINH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOIDUNG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYDANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOAITIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DUYET)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGUOI_DUNG.NAME)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HINH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOIDUNG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NGAYDANG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOAITIN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DUYET)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NGUOI_DUNG.NAME)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
