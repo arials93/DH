@@ -33,6 +33,7 @@
     <div class="m-portlet__body">
         @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
+            <input type="submit" hidden id="trigger_submit" class="btn btn-default" />
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true)
             @Html.HiddenFor(model => model.ID)
@@ -56,15 +57,15 @@
                         <label for="TEN" class="col-2 col-form-label">Tên</label>
                         <div class="col-10">
                             @Html.TextBoxFor(model => model.TEN, new { @class = "form-control m-input" })
-                            @Html.ValidationMessageFor(model => model.TEN, "", new {@class = "form-control-feedback text-danger"})
+                            @Html.ValidationMessageFor(model => model.TEN, "", new { @class = "form-control-feedback text-danger" })
                         </div>
                     </div>
 
-                    <div class="form-group m-form__group row" >
+                    <div class="form-group m-form__group row">
                         <label for="GIOITHIEU" class="col-2 col-form-label">Giới thiệu</label>
                         <div class="col-10">
                             @Html.TextArea("GIOITHIEU", null, new { @class = "form-control m-input" })
-                            @Html.ValidationMessageFor(model => model.GIOITHIEU, "", new { @class = "form-control-feedback text-danger"})
+                            @Html.ValidationMessageFor(model => model.GIOITHIEU, "", new { @class = "form-control-feedback text-danger" })
                         </div>
                     </div>
                 </div>

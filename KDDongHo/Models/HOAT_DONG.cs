@@ -12,19 +12,12 @@ namespace KDDongHo.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class KIEU_MAY
+    public partial class HOAT_DONG
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KIEU_MAY()
-        {
-            this.DONG_HO = new HashSet<DONG_HO>();
-        }
-    
         public int ID { get; set; }
-        public string TEN { get; set; }
-        public string GHICHU { get; set; }
+        public string HOATDONG { get; set; }
+        public int ID_NGUOIDUNG { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DONG_HO> DONG_HO { get; set; }
+        public virtual NGUOI_DUNG NGUOI_DUNG { get; set; }
     }
 }

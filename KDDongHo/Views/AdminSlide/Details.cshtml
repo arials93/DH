@@ -1,0 +1,35 @@
+﻿@model KDDongHo.Models.SLIDE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SLIDE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOGAN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

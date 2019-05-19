@@ -54,6 +54,7 @@ namespace KDDongHo.Controllers
         {
             if (ModelState.IsValid)
             {
+                dong_ho.NGAYDANG = DateTime.Now;
                 db.DONG_HO.Add(dong_ho);
                 try
                 {
@@ -79,6 +80,7 @@ namespace KDDongHo.Controllers
                 {
                     //Không làm gì cả
                 }
+                TempData["success"] = "Tạo sản phẩm thành công";
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -110,7 +112,7 @@ namespace KDDongHo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,MAUMA,KICHCO,DODAY,CHATLIEU_VO,CHATLIEU_DAY,CHATLIEU_KINH,DOCHIEUNUOC,BAOHANH,DONGIA,NGAYDANG,GIAMGIA,ID_HANGSX,ID_KIEUMAY,MOI")] DONG_HO dong_ho, IEnumerable<HttpPostedFileBase> Images)
+        public ActionResult Edit([Bind(Include = "ID,MAUMA,KICHCO,DODAY,CHATLIEU_VO,CHATLIEU_DAY,CHATLIEU_KINH,DOCHIEUNUOC,BAOHANH,DONGIA,NGAYDANG,GIAMGIA,ID_HANGSX,ID_KIEUMAY,MOI")] DONG_HO dong_ho, IEnumerable<HttpPostedFileBase> Images)
         {
             if (ModelState.IsValid)
             {
@@ -141,7 +143,7 @@ namespace KDDongHo.Controllers
                     //Không làm gì cả
                 }
 
-
+                TempData["success"] = "Chỉnh sửa sản phẩm thành công";
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -182,6 +184,7 @@ namespace KDDongHo.Controllers
             }
 
             db.DONG_HO.Remove(dong_ho);
+            TempData["success"] = "Xóa sản phẩm thành công";
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,0 +1,136 @@
+﻿@model IEnumerable<KDDongHo.Models.KHACH_HANG>
+
+@{
+    ViewBag.Title = "Danh sách khách hàng";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+@section styles{
+    @Styles.Render("~/Static/Admin/assets/vendors/custom/datatables/datatables.bundle.css")
+}
+
+@section subheader{
+    <div class="m-subheader d-flex">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator ">Danh sách bài viết</h3>
+            </div>
+        </div>
+        
+    </div>
+}
+
+<div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+        <table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Họ tên</th>
+                    <th>Địa chỉ</th>
+                    <th>SĐT</th>
+                    <th>Email</th>
+                    <th width="120">Điều chỉnh</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @item.ID
+                    </td>
+                    <td>
+                        @item.HOTEN
+                    </td>
+                    <td>
+                        @item.DIACHI
+                    </td>
+                    <td>
+                        @item.SDT
+                    </td>
+                    <td>
+                        @item.EMAIL
+                    </td>
+                    
+
+                    <td>
+                        <a href="@Url.Action("Detail", "AdminNews", new { id = item.ID })" class="btn m-btn btn-sm btn-primary m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+                            <i class="la la-eye"></i>
+                        </a>
+                        
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@RenderPage("~/Views/Admin_Shared/Partials/_modal.cshtml")
+
+@section scripts{
+    @Scripts.Render("~/Static/Admin/assets/vendors/custom/datatables/datatables.bundle.js")
+    @Scripts.Render("~/Static/Admin/assets/app/js/my-script.js")
+    <script>
+        $('#m_table_1').DataTable();
+    </script>
+}
+
+@*<h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HOTEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYSINH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DIACHI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PASS)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOTEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NGAYSINH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DIACHI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PASS)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@

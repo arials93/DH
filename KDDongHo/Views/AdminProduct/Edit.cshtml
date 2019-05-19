@@ -182,6 +182,7 @@
     <div class="m-portlet__body">
         @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
+            <input type="submit" hidden id="trigger_submit" class="btn btn-default" />
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true)
             @Html.HiddenFor(model => model.ID)

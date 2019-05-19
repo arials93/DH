@@ -162,13 +162,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AdminAccountController.cs" />
     <Compile Include="Controllers\AdminBaseController.cs" />
     <Compile Include="Controllers\AdminBrandController.cs" />
+    <Compile Include="Controllers\AdminClientsController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminImageController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\AdminNewsController.cs" />
     <Compile Include="Controllers\AdminProductController.cs" />
     <Compile Include="Controllers\AdminProductTypeController.cs" />
+    <Compile Include="Controllers\AdminSlideController.cs" />
     <Compile Include="Controllers\WebHomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -189,6 +193,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HINH_ANH.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HOAT_DONG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KHACH_HANG.cs">
@@ -3322,6 +3329,26 @@
     <Content Include="Views\AdminProductType\Edit.cshtml" />
     <Content Include="Views\AdminProductType\Index.cshtml" />
     <Content Include="Views\AdminLogin\Login.cshtml" />
+    <Content Include="Views\AdminSlide\Create.cshtml" />
+    <Content Include="Views\AdminSlide\Delete.cshtml" />
+    <Content Include="Views\AdminSlide\Details.cshtml" />
+    <Content Include="Views\AdminSlide\Edit.cshtml" />
+    <Content Include="Views\AdminSlide\Index.cshtml" />
+    <Content Include="Views\AdminNews\Create.cshtml" />
+    <Content Include="Views\AdminNews\Delete.cshtml" />
+    <Content Include="Views\AdminNews\Details.cshtml" />
+    <Content Include="Views\AdminNews\Edit.cshtml" />
+    <Content Include="Views\AdminNews\Index.cshtml" />
+    <Content Include="Views\AdminClients\Create.cshtml" />
+    <Content Include="Views\AdminClients\Delete.cshtml" />
+    <Content Include="Views\AdminClients\Details.cshtml" />
+    <Content Include="Views\AdminClients\Edit.cshtml" />
+    <Content Include="Views\AdminClients\Index.cshtml" />
+    <Content Include="Views\AdminAccount\Create.cshtml" />
+    <Content Include="Views\AdminAccount\Delete.cshtml" />
+    <Content Include="Views\AdminAccount\Details.cshtml" />
+    <Content Include="Views\AdminAccount\Edit.cshtml" />
+    <Content Include="Views\AdminAccount\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

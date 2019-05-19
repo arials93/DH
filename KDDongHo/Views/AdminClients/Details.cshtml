@@ -1,0 +1,135 @@
+﻿@model KDDongHo.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Chi tết khách hàng";
+    Layout = "~/Views/Admin_Shared/_Layout.cshtml";
+}
+
+@section subheader{
+    <div class="m-subheader d-flex">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator ">Sửa nhãn hiệu</h3>
+            </div>
+        </div>
+        <div class="m-portlet__nav-item ml-auto">
+            <a href="@Url.Action("Index", "AdminClients")" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
+                <span>
+                    <i class="la la-arrow-left"></i>
+                    <span>Quay lại</span>
+                </span>
+            </a>
+        </div>
+    </div>
+}
+
+<div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2">Họ tên</label>
+                        <div class="col-10">
+                            @Html.DisplayNameFor(model => model.HOTEN)
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2">Ngày sinh</label>
+                        <div class="col-10">
+                            @Html.DisplayNameFor(model => model.NGAYSINH)
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2">SĐT</label>
+                        <div class="col-10">
+                            @Html.DisplayNameFor(model => model.SDT)
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2">Email</label>
+                        <div class="col-10">
+                            @Html.DisplayNameFor(model => model.EMAIL)
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <label for="TEN" class="col-2">Địa chỉ</label>
+                        <div class="col-10">
+                            @Html.DisplayNameFor(model => model.DIACHI)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+
+@section scripts {
+    
+    
+}
+
+@*<h2>Details</h2>
+
+    <div>
+        <h4>KHACH_HANG</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.HOTEN)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HOTEN)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NGAYSINH)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NGAYSINH)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DIACHI)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DIACHI)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SDT)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SDT)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EMAIL)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PASS)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PASS)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

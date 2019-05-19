@@ -11,7 +11,6 @@ namespace KDDongHo.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class DONG_HO
     {
@@ -24,7 +23,6 @@ namespace KDDongHo.Models
         }
     
         public int ID { get; set; }
-        //[Required(ErrorMessage = "Vui lòng nhập mẫu mã")]
         public string MAUMA { get; set; }
         public Nullable<double> KICHCO { get; set; }
         public Nullable<double> DODAY { get; set; }
@@ -32,17 +30,11 @@ namespace KDDongHo.Models
         public string CHATLIEU_DAY { get; set; }
         public string CHATLIEU_KINH { get; set; }
         public Nullable<int> DOCHIEUNUOC { get; set; }
-
-        //[Required(ErrorMessage = "Vui lòng nhập năm bảo hành")]
         public string BAOHANH { get; set; }
-        
-        //[Required(ErrorMessage = "Vui lòng nhập đơn giá")]
-        //[RegularExpression(@"/(^\(\d{10})?)$/", ErrorMessage = "Chỉ được nhập số")]
-        public double DONGIA { get; set; }       
+        public double DONGIA { get; set; }
         public Nullable<System.DateTime> NGAYDANG { get; set; }
-        //[Required(ErrorMessage = "Vui lòng nhập giảm giá")]
-        public Nullable<int> GIAMGIA { get; set; }
         public int ID_HANGSX { get; set; }
+        public Nullable<int> GIAMGIA { get; set; }
         public int ID_KIEUMAY { get; set; }
         public Nullable<bool> MOI { get; set; }
     

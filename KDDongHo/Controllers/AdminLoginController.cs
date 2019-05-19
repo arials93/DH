@@ -33,6 +33,7 @@ namespace KDDongHo.Controllers
                     Session["account_name"] = ng_d.NAME;
                     Session["account_hoten"] = ng_d.HOTEN;
                     Session["account_phone"] = ng_d.SDT;
+                    TempData["success"] = "Đăng nhập thành công";
                     return RedirectToAction("Index", "AdminDashboard");
                 }
                 catch (InvalidOperationException)

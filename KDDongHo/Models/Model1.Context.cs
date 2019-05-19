@@ -31,6 +31,7 @@ namespace KDDongHo.Models
         public virtual DbSet<DONG_HO> DONG_HO { get; set; }
         public virtual DbSet<HANG_SX> HANG_SX { get; set; }
         public virtual DbSet<HINH_ANH> HINH_ANH { get; set; }
+        public virtual DbSet<HOAT_DONG> HOAT_DONG { get; set; }
         public virtual DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public virtual DbSet<KIEU_MAY> KIEU_MAY { get; set; }
         public virtual DbSet<LUOT_LIKE> LUOT_LIKE { get; set; }
