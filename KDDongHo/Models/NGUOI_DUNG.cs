@@ -32,9 +32,7 @@ namespace KDDongHo.Models
         public Nullable<bool> IS_SUPER_USER { get; set; }
     
         public virtual ICollection<BAI_VIET> BAI_VIET { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOAT_DONG> HOAT_DONG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHAN_QUYEN> PHAN_QUYEN { get; set; }
     }
 }

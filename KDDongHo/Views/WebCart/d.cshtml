@@ -1,0 +1,135 @@
+﻿@model IEnumerable<KDDongHo.Models.DONG_HO>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAUMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KICHCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DODAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHATLIEU_VO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHATLIEU_DAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHATLIEU_KINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOCHIEUNUOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAOHANH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DONGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYDANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIAMGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HANG_SX.TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KIEU_MAY.TEN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAUMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KICHCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DODAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHATLIEU_VO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHATLIEU_DAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHATLIEU_KINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOCHIEUNUOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAOHANH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DONGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYDANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIAMGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HANG_SX.TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KIEU_MAY.TEN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+@foreach (var item in Model)
+{
+    int gia = 0;
+    if (item.Dongho.GIAMGIA > 0)
+    {
+        gia = int.Parse((@item.Dongho.DONGIA - (@item.Dongho.DONGIA * @item.Dongho.GIAMGIA) / 100).toString());
+    }
+    else
+    {
+        gia = int.Parse((@item.Dongho.DONGIA).ToString());
+    }   
+    <li class="header-cart-item">
+        <div class="header-cart-item-img">
+            <img src="@item.HINH_ANH.First().URL" alt="IMG">
+        </div>
+
+        <div class="header-cart-item-txt">
+            <a href="#" class="header-cart-item-name">
+                @item.MAUMA
+            </a>
+
+            <span class="header-cart-item-info">
+                1 x gia
+            </span>
+        </div>
+    </li>
+    
+}
+

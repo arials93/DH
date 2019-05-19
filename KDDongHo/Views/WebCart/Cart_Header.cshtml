@@ -1,0 +1,28 @@
+﻿@foreach (var item in (List<KDDongHo.Models.Cart>)Session["Cart"])
+{
+    int gia = 0;
+    if (item.Dongho.GIAMGIA > 0)
+    {
+        gia = int.Parse((@item.Dongho.DONGIA - (@item.Dongho.DONGIA * @item.Dongho.GIAMGIA) / 100).ToString());
+    }
+    else
+    {
+        gia = int.Parse((@item.Dongho.DONGIA).ToString());
+    }
+    <li class="header-cart-item">
+        <div class="header-cart-item-img">
+            <img src="@item.Dongho.HINH_ANH.First().URL" alt="IMG">
+        </div>
+
+        <div class="header-cart-item-txt">
+            <a href="#" class="header-cart-item-name">
+                @item.Dongho.MAUMA
+            </a>
+
+            <span class="header-cart-item-info">
+                1 x gia
+            </span>
+        </div>
+    </li>
+
+}

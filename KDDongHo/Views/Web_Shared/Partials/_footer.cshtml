@@ -2,14 +2,22 @@
     <div class="flex-w p-b-90">
         <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
             <h4 class="s-text12 p-b-30">
-                GET IN TOUCH
+                Địa chỉ
             </h4>
 
             <div>
                 <p class="s-text7 w-size27">
-                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                    - 334 Phan Văn Trị, Phường 11, Quận Bình Thạnh, TPHCM
                 </p>
-
+                <p class="s-text7 w-size27">
+                    - Thời gian làm việc:
+                </p>
+                <p class="s-text7 w-size27 p-l-20">
+                    Sáng: 8h30 - 12h30
+                </p>
+                <p class="s-text7 w-size27 p-l-20">
+                    Chiều: 1h30 - 5h30
+                </p>             
                 <div class="flex-m p-t-30">
                     <a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
                     <a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
@@ -22,31 +30,48 @@
 
         <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
             <h4 class="s-text12 p-b-30">
-                Categories
+                Thương hiệu
+            </h4>
+
+            <ul>
+                @foreach(var item in ViewBag.Brand)
+                {
+                    <li class="p-b-9">
+                        <a href="@Url.Action("Products_Brand", "WebProduct", new { id = item.ID})" class=" s-text7">
+                            @item.TEN
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+            <h4 class="s-text12 p-b-30">
+                Liên kết
             </h4>
 
             <ul>
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Men
+                    <a href="@Url.Action("News_All", "WebNews")" class="s-text7">
+                        Tin tức
+                    </a>
+                </li>
+
+                <li class="p-b-9">
+                    <a href="@Url.Action("About", "WebNews")" class="s-text7">
+                        Giới thiệu
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Women
+                        Liên hệ
                     </a>
                 </li>
 
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Dresses
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Sunglasses
+                    <a href="@Url.Action("Login","WebLogin")" class="s-text7">
+                        Đăng nhập
                     </a>
                 </li>
             </ul>
@@ -54,63 +79,30 @@
 
         <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
             <h4 class="s-text12 p-b-30">
-                Links
+                Về chúng tôi
             </h4>
 
             <ul>
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Search
+                        Giao hàng
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        About Us
+                        Bảo hành
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Contact Us
+                        Khiếu nại
                     </a>
                 </li>
-
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Returns
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-            <h4 class="s-text12 p-b-30">
-                Help
-            </h4>
-
-            <ul>
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Track Order
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Returns
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Shipping
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        FAQs
+                        Ưu đãi
                     </a>
                 </li>
             </ul>
@@ -118,7 +110,7 @@
 
         <div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
             <h4 class="s-text12 p-b-30">
-                Newsletter
+                Theo dõi
             </h4>
 
             <form>
@@ -130,7 +122,7 @@
                 <div class="w-size2 p-t-20">
                     <!-- Button -->
                     <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-                        Subscribe
+                        Theo dõi
                     </button>
                 </div>
 

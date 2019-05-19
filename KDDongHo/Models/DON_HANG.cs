@@ -22,7 +22,7 @@ namespace KDDongHo.Models
         public int ID { get; set; }
         public string SO_DH { get; set; }
         public Nullable<int> ID_KHACHHANG { get; set; }
-        public double TONGTIEN { get; set; }
+        public int TONGTIEN { get; set; }
         public string GHICHU { get; set; }
         public Nullable<bool> DUYET { get; set; }
         public Nullable<System.DateTime> NGAYDAT { get; set; }

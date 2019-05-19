@@ -174,9 +174,11 @@
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminNewsController.cs" />
     <Compile Include="Controllers\AdminSlideController.cs" />
+    <Compile Include="Controllers\WebCartController.cs" />
     <Compile Include="Controllers\WebHomeController.cs" />
     <Compile Include="Controllers\WebLoginController.cs" />
     <Compile Include="Controllers\WebNewsController.cs" />
+    <Compile Include="Controllers\WebOrderController.cs" />
     <Compile Include="Controllers\WebProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,6 +186,7 @@
     <Compile Include="Models\BAI_VIET.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\DAT_HANG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -3136,10 +3139,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Static\Storage\Brand\" />
-    <Folder Include="Views\WebBrand\" />
     <Folder Include="Static\Storage\ProductImages\" />
     <Folder Include="Views\AdminBase\" />
     <Folder Include="Views\AdminImage\" />
+    <Folder Include="Views\WebBrand\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -3354,6 +3357,10 @@
     <Content Include="Views\AdminAccount\Details.cshtml" />
     <Content Include="Views\AdminAccount\Edit.cshtml" />
     <Content Include="Views\AdminAccount\Index.cshtml" />
+    <Content Include="Views\WebCart\Cart.cshtml" />
+    <Content Include="Views\WebCart\d.cshtml" />
+    <Content Include="Views\WebCart\Cart_Header.cshtml" />
+    <Content Include="Views\WebOrder\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

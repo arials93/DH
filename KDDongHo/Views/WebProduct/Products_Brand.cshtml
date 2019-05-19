@@ -124,35 +124,15 @@
                     </h4>
 
                     <ul class="p-b-54">
-                        <li class="p-t-4">
-                            <a href="#" class="s-text13 active1">
-                                Tất cả
+                        @foreach(var item in ViewBag.Brand)
+                        {
+                            <li class="p-t-4">
+                            <a href="@Url.Action("Products_Brand", "WebProduct", new { id = item.ID})" class="s-text13 active1">
+                                @item.TEN
                             </a>
                         </li>
-
-                        <li class="p-t-4">
-                            <a href="#" class="s-text13">
-                                Women
-                            </a>
-                        </li>
-
-                        <li class="p-t-4">
-                            <a href="#" class="s-text13">
-                                Men
-                            </a>
-                        </li>
-
-                        <li class="p-t-4">
-                            <a href="#" class="s-text13">
-                                Kids
-                            </a>
-                        </li>
-
-                        <li class="p-t-4">
-                            <a href="#" class="s-text13">
-                                Accesories
-                            </a>
-                        </li>
+                        }
+                        
                     </ul>
 
                     <!--  -->

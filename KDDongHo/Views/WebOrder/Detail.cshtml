@@ -1,0 +1,112 @@
+﻿@model KDDongHo.Models.DON_HANG
+
+@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Web_Shared/_Layout.cshtml";
+}
+
+<section class="bgwhite p-t-66 p-b-60">
+    <div class="container">
+        <h5 class="text-success text-center mb-4">Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi</h5>
+        <div class="text-center">
+            <h4>Thông tin thanh toán cơ bản</h4>
+            <div class="my-3">
+                
+                Số đơn hàng: @Html.DisplayFor(model => model.SO_DH)<br />
+                Khách hàng: @Model.KHACH_HANG.HOTEN<br />
+                
+                Ngày giao: @Model.NGAYGIAO.Value.ToString("dd-MM-yyyy")<br />
+                Tổng tiền: @string.Format("{0:0,0 VND}", @Model.TONGTIEN)
+                       
+            </div>
+        </div>
+        
+        <table class="w-100">
+            <thead>
+                <th>Đồng hồ</th>
+                <th>Hình ảnh</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Giá giảm</th>
+                <th>Thành tiền</th>
+            </thead>
+            <tbody>
+                @foreach(var item in Model.DAT_HANG) {
+                    <tr>
+                        <td>@item.DONG_HO.MAUMA</td>
+                        <td><img src="@item.DONG_HO.HINH_ANH.First().URL"  width="150"/></td>
+                        <td>@item.SOLUONG</td>
+                        <td>@string.Format("{0:0,0 VND}", @item.DONGIA)</td>
+                        <td>@item.GIAGIAM %</td>
+                        <td>@string.Format("{0:0,0 VND}", @item.THANHTIEN)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+            @*<div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SO_DH)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.SO_DH)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TONGTIEN)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.TONGTIEN)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.GHICHU)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.GHICHU)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DUYET)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DUYET)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.NGAYDAT)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.NGAYDAT)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.NGAYGIAO)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.NGAYGIAO)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.KHACH_HANG.HOTEN)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.KHACH_HANG.HOTEN)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>*@

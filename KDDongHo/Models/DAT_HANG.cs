@@ -18,9 +18,9 @@ namespace KDDongHo.Models
         public int ID_DONGHO { get; set; }
         public int ID_DONHANG { get; set; }
         public int SOLUONG { get; set; }
-        public double DONGIA { get; set; }
-        public double GIAGIAM { get; set; }
-        public double THANHTIEN { get; set; }
+        public int DONGIA { get; set; }
+        public int GIAGIAM { get; set; }
+        public int THANHTIEN { get; set; }
     
         public virtual DONG_HO DONG_HO { get; set; }
         public virtual DON_HANG DON_HANG { get; set; }

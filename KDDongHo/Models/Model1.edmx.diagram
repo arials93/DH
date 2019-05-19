@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="940e435d864c46d290f8e189756814f1" Name="Diagram1">
+      <Diagram DiagramId="b44aa62c1be540c4a6f3f1bd2b488e26" Name="Diagram1">
         <EntityTypeShape EntityType="QLKD_DONGHOModel.BAI_VIET" Width="1.5" PointX="10" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLKD_DONGHOModel.DAT_HANG" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="QLKD_DONGHOModel.DON_HANG" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
@@ -19,18 +19,18 @@
         <EntityTypeShape EntityType="QLKD_DONGHOModel.PHAN_QUYEN" Width="1.5" PointX="13" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QLKD_DONGHOModel.QUYEN_LOI" Width="1.5" PointX="10.75" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLKD_DONGHOModel.SLIDE" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__BAI_VIET__ID_NGU__44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__DAT_HANG__ID_DON__5DCAEF64" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__DAT_HANG__ID_DON__5EBF139D" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__DON_HANG__ID_KHA__5AEE82B9" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__DONG_HO__ID_HANG__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__DONG_HO__ID_KIEU__4E88ABD4" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__HINH_ANH__ID_DON__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__LUOT_LIKE__ID_DO__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__HOAT_DONG__ID_NG__412EB0B6" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__LUOT_LIKE__ID_KH__5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__PHAN_QUYE__ID_NG__3D5E1FD2" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKD_DONGHOModel.FK__PHAN_QUYE__ID_QU__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__BAI_VIET__ID_NGU__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__DAT_HANG__ID_DON__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__DAT_HANG__ID_DON__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__DON_HANG__ID_KHA__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__DONG_HO__ID_HANG__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__DONG_HO__ID_KIEU__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__HINH_ANH__ID_DON__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__LUOT_LIKE__ID_DO__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__HOAT_DONG__ID_NG__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__LUOT_LIKE__ID_KH__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__PHAN_QUYE__ID_NG__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKD_DONGHOModel.FK__PHAN_QUYE__ID_QU__173876EA" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

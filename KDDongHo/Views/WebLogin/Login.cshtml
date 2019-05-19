@@ -80,8 +80,41 @@
     <div class="container">
         <div class="row">
             
-                <form class="leave-comment w-50 mx-auto">
-                    <h4 class="m-text26 p-b-36 p-t-15 text-center">
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "leave-comment w-50 mx-auto" }))
+                {
+                    @Html.AntiForgeryToken()                    
+                    
+                    <h4 class="m-text26 p-b-36 p-t-15 text-center" style="color:#e65540">
+                        Đăng nhập
+                    </h4>
+                    
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        @Html.TextBoxFor(model => model.EMAIL, new { @class = "sizefull s-text7 p-l-22 p-r-22", @placeholder = "Nhập Email" })
+                    </div>
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        @Html.PasswordFor(model => model.PASS, new { @class = "sizefull s-text7 p-l-22 p-r-22", @placeholder = "Nhập mật khẩu" })
+                    </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="d-flex mx-auto m-t-10">
+                        <div class="d-flex mx-auto">
+                            <div class="w-size25 m-r-5">
+                                <!-- Button -->
+                                <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                                    Đăng ký
+                                </button>
+                            </div>
+                            <div class="w-size25">
+                                <!-- Button -->
+                                <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @*<form class="leave-comment w-50 mx-auto">
+                    <h4 class="m-text26 p-b-36 p-t-15 text-center" style="color:#e65540">
                         Đăng nhập
                     </h4>
 
@@ -90,7 +123,7 @@
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Mật khẩu">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="name" placeholder="Mật khẩu">
                     </div>
                     
                     <div class="d-flex mx-auto" >
@@ -111,7 +144,7 @@
                         
                     </div>
                     
-                </form>
+                </form>*@
            
         </div>
     </div>

@@ -30,7 +30,7 @@ namespace KDDongHo.Models
         public string CHATLIEU_KINH { get; set; }
         public Nullable<int> DOCHIEUNUOC { get; set; }
         public string BAOHANH { get; set; }
-        public double DONGIA { get; set; }
+        public int DONGIA { get; set; }
         public Nullable<System.DateTime> NGAYDANG { get; set; }
         public int ID_HANGSX { get; set; }
         public Nullable<int> GIAMGIA { get; set; }
